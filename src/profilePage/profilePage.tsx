@@ -4,28 +4,25 @@ import './ProfilePage.css';
 
 import ProfileBanner from './ProfileBanner';
 import TopPicksRow from './TopPicksRow';
-import ContinueWatching from './ContinueWatching';
-type ProfileType = 'recruiter' | 'developer' | 'stalker' | 'adventure';
+import { ProfileType } from '../types';
 
 const ProfilePage: React.FC = () => {
   const location = useLocation();
   const backgroundGif = location.state?.backgroundGif || "https://media.giphy.com/media/xT9IgzoKnwFNmISR8I/giphy.gif"; // Default GIF
   const { profileName } = useParams<{ profileName: string }>();
 
-  const profile = ['recruiter', 'developer', 'stalker', 'adventure'].includes(profileName!)
+  const profile = ['Professional', 'Creative', 'Explorer', 'Visionary'].includes(profileName!)
     ? (profileName as ProfileType)
-    : 'recruiter';
+    : 'Professional';
   return (
     <>
       <div
         className="profile-page"
         style={{ backgroundImage: `url(${backgroundGif})` }}
       >
-        <ProfileBanner
-        />
+        <ProfileBanner profile={profile} />
       </div>
       <TopPicksRow profile={profile} />
-      <ContinueWatching profile={profile} />
     </>
   );
 };

@@ -12,22 +12,22 @@ const Browse: React.FC = () => {
 
   const profiles = [
     {
-      name: "recruiter",
+      name: "Professional",
       image: blueImage,
-      backgroundGif: "https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExOTZ5eWwwbjRpdWM1amxyd3VueHhteTVzajVjeGZtZGJ1dDc4MXMyNCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9dg/16u7Ifl2T4zYfQ932F/giphy.gif" // Dark storm clouds
+      backgroundGif: "https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExYWlhODJzcnV6cjd3bTBzbjJ2Y2F2N3NlOXozaHF0YXBtNjNpd3Z0diZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/65R2lI3SlzBE0deFsL/giphy.gif" // Dark storm clouds
     },
     {
-      name: "developer",
+      name: "Creative",
       image: greyImage,
       backgroundGif: "https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExNGNidDl5emZpejY2eGFxa2I4NW0zZGNpbWRlbnBrZ3N2dWhhbzM1MyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/TFPdmm3rdzeZ0kP3zG/giphy.gif" // Flickering neon lights
     },
     {
-      name: "stalker",
+      name: "Explorer",
       image: redImage,
       backgroundGif: "https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExc28yMjMyZmJ6eWtxbmNwdDV6cXk4dWZmcjFhZms2cXBjN2h5ZDJjeSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/QjZXUBUr89CkiWLPjL/giphy.gif" // Dark, abstract digital lights
     },
     {
-      name: "adventurer",
+      name: "Visionary",
       image: yellowImage,
       backgroundGif: "https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExbmxib24ycWo2cjlmazh0NGV5NTZ2Mzd2YWY0M2tvam9oYXBwYW1ocCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/ERKMnDK6tkzJe8YVa3/giphy-downsized-large.gif" // Dark ocean waves at night
     },

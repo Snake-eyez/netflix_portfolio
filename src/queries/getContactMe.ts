@@ -1,6 +1,7 @@
 // queries/getContactMe.ts
-import datoCMSClient from './datoCMSClient';
+
 import { ContactMe } from '../types';
+import { mockContactMe } from '../data/mockData';
 
 const GET_CONTACT_ME = `
   query {
@@ -20,6 +21,5 @@ const GET_CONTACT_ME = `
 `;
 
 export async function getContactMe(): Promise<ContactMe> {
-  const data = await datoCMSClient.request<{ contactMe: ContactMe }>(GET_CONTACT_ME);
-  return data.contactMe;
+  return Promise.resolve(mockContactMe);
 }

@@ -25,7 +25,7 @@ const PlayButton: React.FC<PlayButtonProps> = ({ onClick, label = "Play" }) => {
           />
         </svg>
       </div>
-      <div className="spacer"></div>
+
       <span className="label">{label}</span>
     </button>
   );

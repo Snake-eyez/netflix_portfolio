@@ -1,44 +1,63 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import './ProfileBanner.css';
 import PlayButton from '../components/PlayButton';
 import MoreInfoButton from '../components/MoreInfoButton';
-import { getProfileBanner } from '../queries/getProfileBanner';
-import { ProfileBanner as ProfileBannerType } from '../types';
+import { ProfileType } from '../types';
 
-const ProfileBanner: React.FC = () => {
+interface ProfileBannerProps {
+  profile: ProfileType;
+}
 
+const bannerConfig = {
+  Professional: {
+    headline: "Professional",
+    description: "For clients, business partners, investors — serious, results-oriented.",
+    primaryCta: "Book Strategy",
+    secondaryCta: "LinkedIn"
+  },
+  Creative: {
+    headline: "Creative",
+    description: "For collaborators, creators, spiritual seekers, metaphysical thinkers.",
+    primaryCta: "Follow Substack",
+    secondaryCta: "Instagram"
+  },
+  Explorer: {
+    headline: "Explorer",
+    description: "For curious minds, workshop participants, learners.",
+    primaryCta: "Join Workshop",
+    secondaryCta: "Download Kit"
+  },
+  Visionary: {
+    headline: "Visionary",
+    description: "For future clients, thinkers, and those who want inspiration + impact.",
+    primaryCta: "Book a Talk",
+    secondaryCta: "Consultation"
+  }
+};
 
-  const [bannerData, setBannerData] = useState<ProfileBannerType | null>(null);
+const ProfileBanner: React.FC<ProfileBannerProps> = ({ profile }) => {
+  const config = bannerConfig[profile];
 
-  useEffect(() => {
-    async function fetchData() {
-      const data = await getProfileBanner();
-      setBannerData(data);
-    }
-    fetchData();
-  }, []);
-
-  if (!bannerData) return <div>Loading...</div>;
-
-  const handlePlayClick = () => {
-    window.open(bannerData.resumeLink.url, '_blank');
+  const handlePrimaryClick = () => {
+    // Navigate or open link based on profile
+    console.log(`Clicked Primary for ${profile}`);
   };
 
-  const handleLinkedinClick = () => { 
-    window.open(bannerData.linkedinLink, '_blank');
+  const handleSecondaryClick = () => {
+    // Navigate or open link based on profile
+    console.log(`Clicked Secondary for ${profile}`);
   }
 
   return (
     <div className="profile-banner">
       <div className="banner-content">
-        <h1 className="banner-headline" id='headline'>{bannerData.headline}</h1>
+        <h1 className="banner-headline" id='headline'>{config.headline}</h1>
         <p className="banner-description">
-          {bannerData.profileSummary}
+          {config.description}
         </p>
 
         <div className="banner-buttons">
-          <PlayButton onClick={handlePlayClick} label="Resume" />
-          <MoreInfoButton onClick={handleLinkedinClick} label="Linkedin" />
+          <PlayButton onClick={handlePrimaryClick} label={config.primaryCta} />
         </div>
       </div>
     </div>

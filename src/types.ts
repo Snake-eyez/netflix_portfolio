@@ -1,5 +1,7 @@
 // types.ts
 
+export type ProfileType = 'Professional' | 'Creative' | 'Explorer' | 'Visionary';
+
 export interface ProfileBanner {
   backgroundImage: { url: string };
   headline: string;
@@ -52,7 +54,7 @@ export interface ContactMe {
   phoneNumber: string;
 }
 
-export interface Skill { 
+export interface Skill {
   name: string;
   category: string;
   description: string;

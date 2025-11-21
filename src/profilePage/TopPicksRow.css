@@ -1,76 +1,71 @@
 .top-picks-row {
-  margin: 20px 0;
-  padding: 10px 20px
+  margin: 40px 0;
+  padding: 0 40px;
 }
 
 .row-title {
-  font-size: 2rem;
-  color: #fff;
+  font-size: 1.5rem;
+  color: var(--secondary-color);
   margin-bottom: 20px;
   animation: fadeIn 1s ease-in-out;
+  font-weight: 600;
 }
 
 .card-row {
   display: flex;
-  gap: 15px;
+  gap: 20px;
+  padding-bottom: 20px;
+  width: 100%;
 }
 
 .pick-card {
   position: relative;
-  width: 250px;
-  height: 200px;
+  flex: 1;
+  /* Distribute space equally */
+  height: 180px;
   border-radius: 8px;
   overflow: hidden;
   cursor: pointer;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition: transform 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94), box-shadow 0.3s ease;
   animation: slideIn 0.5s ease forwards;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  /* Start hidden for animation */
 }
 
 .pick-card:hover {
   transform: scale(1.05);
-  cursor: pointer;
-  box-shadow: 0 8px 20px rgba(255, 0, 0, 0.5); /* Netflix red glow on hover */
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+  z-index: 10;
+  filter: brightness(1.1);
 }
 
-.pick-image {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  transition: transform 0.3s ease;
-}
-
-.pick-card:hover .pick-image {
-  transform: scale(1.1);
-}
-
-.overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: rgba(0, 0, 0, 0.5);
+.card-content {
   display: flex;
-  justify-content: center;
+  flex-direction: column;
   align-items: center;
-  opacity: 0;
-  transition: opacity 0.3s ease;
+  justify-content: center;
+  gap: 15px;
+  text-align: center;
+  padding: 20px;
 }
 
-.pick-card:hover .overlay {
-  opacity: 1;
+.pick-icon {
+  font-size: 2.5rem;
+  color: rgba(255, 255, 255, 0.9);
+  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.3));
 }
 
 .pick-label {
   color: #fff;
   font-size: 1.2rem;
-  font-weight: bold;
-  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
-}
-
-.pick-label:hover {
- color: rgb(153, 80, 80);
+  font-weight: 700;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+  text-transform: uppercase;
+  letter-spacing: 1px;
 }
 
 /* Animations */
@@ -79,6 +74,7 @@
     opacity: 0;
     transform: translateY(-20px);
   }
+
   to {
     opacity: 1;
     transform: translateY(0);
@@ -88,10 +84,22 @@
 @keyframes slideIn {
   from {
     opacity: 0;
-    transform: translateX(-20px);
+    transform: translateY(20px);
   }
+
   to {
     opacity: 1;
-    transform: translateX(0);
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 768px) {
+  .card-row {
+    flex-direction: column;
+  }
+
+  .pick-card {
+    width: 100%;
+    height: 120px;
   }
 }

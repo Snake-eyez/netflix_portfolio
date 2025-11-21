@@ -1,6 +1,7 @@
 // queries/getCertifications.ts
-import datoCMSClient from './datoCMSClient';
+
 import { Certification } from '../types';
+import { mockCertifications } from '../data/mockData';
 
 const GET_CERTIFICATIONS = `
   query {
@@ -15,6 +16,5 @@ const GET_CERTIFICATIONS = `
 `;
 
 export async function getCertifications(): Promise<Certification[]> {
-  const data = await datoCMSClient.request<{ allCertifications: Certification[] }>(GET_CERTIFICATIONS);
-  return data.allCertifications;
+  return Promise.resolve(mockCertifications);
 }

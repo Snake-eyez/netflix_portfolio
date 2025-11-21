@@ -1,6 +1,7 @@
 // queries/getWorkPermit.ts
-import datoCMSClient from './datoCMSClient';
+
 import { WorkPermit } from '../types';
+import { mockWorkPermit } from '../data/mockData';
 
 const GET_WORK_PERMIT = `
   query {
@@ -14,6 +15,5 @@ const GET_WORK_PERMIT = `
 `;
 
 export async function getWorkPermit(): Promise<WorkPermit> {
-  const data = await datoCMSClient.request<{ workPermit: WorkPermit }>(GET_WORK_PERMIT);
-  return data.workPermit;
+  return Promise.resolve(mockWorkPermit);
 }

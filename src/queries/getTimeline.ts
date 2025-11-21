@@ -1,6 +1,7 @@
 // queries/getTimeline.ts
-import datoCMSClient from './datoCMSClient';
+
 import { TimelineItem } from '../types';
+import { mockTimeline } from '../data/mockData';
 
 const GET_TIMELINE = `
 {
@@ -16,6 +17,5 @@ const GET_TIMELINE = `
 `;
 
 export async function getTimeline(): Promise<TimelineItem[]> {
-  const data = await datoCMSClient.request<{ allTimelines: TimelineItem[] }>(GET_TIMELINE);
-  return data.allTimelines;
+  return Promise.resolve(mockTimeline);
 }

@@ -23,6 +23,6 @@ export const getDatoCmsToken = (): string => {
       return process.env.REACT_APP_DATOCMS_NODE_TOKEN ?? '';
 
     default:
-      throw new Error(`No DatoCMS token configured for hostname: ${hostname}`);
+      return 'dummy-token';
   }
 };

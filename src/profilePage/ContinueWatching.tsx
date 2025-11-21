@@ -1,37 +1,36 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import './ContinueWatching.css';
-
-type ProfileType = 'recruiter' | 'developer' | 'stalker' | 'adventure';
+import { ProfileType } from '../types';
 
 interface ContinueWatchingProps {
   profile: ProfileType;
 }
 
 const continueWatchingConfig = {
-  recruiter: [
-    { title: "Music", imgSrc: "https://picsum.photos/id/1025/300/200", link: "/music" },
-    { title: "Reading", imgSrc: "https://picsum.photos/id/1026/300/200", link: "/reading" },
-    { title: "Blogs", imgSrc: "https://picsum.photos/id/1027/300/200", link: "/blogs" },
-    { title: "Contact Me", imgSrc: "https://picsum.photos/id/1029/300/200", link: "/contact-me" }
+  Professional: [
+    { title: "Recent Projects", color: "var(--accent-color-2)", link: "/projects" },
+    { title: "Latest Blog", color: "var(--secondary-color)", link: "/blogs" },
+    { title: "Contact", color: "var(--emphasis-color)", link: "/contact-me" },
+    { title: "LinkedIn", color: "var(--accent-color-1)", link: "/contact-me" }
   ],
-  developer: [
-    { title: "Music", imgSrc: "https://picsum.photos/id/1025/300/200", link: "/music" },
-    { title: "Reading", imgSrc: "https://picsum.photos/id/1026/300/200", link: "/reading" },
-    { title: "Blogs", imgSrc: "https://picsum.photos/id/1027/300/200", link: "/blogs" },
-    { title: "Certifications", imgSrc: "https://picsum.photos/id/1028/300/200", link: "/certifications" },
-    { title: "Contact Me", imgSrc: "https://picsum.photos/id/1029/300/200", link: "/contact-me" }
+  Creative: [
+    { title: "Music", color: "var(--emphasis-color)", link: "/music" },
+    { title: "Reading List", color: "var(--accent-color-1)", link: "/reading" },
+    { title: "Inspiration", color: "var(--secondary-color)", link: "/blogs" },
+    { title: "Gallery", color: "var(--accent-color-2)", link: "/projects" }
   ],
-  stalker: [
-    { title: "Reading", imgSrc: "https://picsum.photos/id/1026/300/200", link: "/reading" },
-    { title: "Blogs", imgSrc: "https://picsum.photos/id/1027/300/200", link: "/blogs" },
-    { title: "Contact Me", imgSrc: "https://picsum.photos/id/1029/300/200", link: "/contact-me" }
+  Explorer: [
+    { title: "Workshops", color: "var(--accent-color-1)", link: "/projects" },
+    { title: "Resources", color: "var(--emphasis-color)", link: "/skills" },
+    { title: "Newsletter", color: "var(--secondary-color)", link: "/contact-me" },
+    { title: "Community", color: "var(--accent-color-2)", link: "/contact-me" }
   ],
-  adventure: [
-    { title: "Music", imgSrc: "https://picsum.photos/id/1025/300/200", link: "/music" },
-    { title: "Reading", imgSrc: "https://picsum.photos/id/1026/300/200", link: "/reading" },
-    { title: "Certifications", imgSrc: "https://picsum.photos/id/1028/300/200", link: "/certifications" },
-    { title: "Contact Me", imgSrc: "https://picsum.photos/id/1029/300/200", link: "/contact-me" }
+  Visionary: [
+    { title: "Vision", color: "var(--secondary-color)", link: "/recommendations" },
+    { title: "Ideas", color: "var(--accent-color-2)", link: "/blogs" },
+    { title: "Connect", color: "var(--emphasis-color)", link: "/contact-me" },
+    { title: "Future", color: "var(--accent-color-1)", link: "/projects" }
   ]
 };
 
@@ -43,9 +42,16 @@ const ContinueWatching: React.FC<ContinueWatchingProps> = ({ profile }) => {
       <h2 className="row-title">Continue Watching for {profile}</h2>
       <div className="card-row">
         {continueWatching.map((pick, index) => (
-          <Link to={pick.link} key={index} className="pick-card">
-            <img src={pick.imgSrc} alt={pick.title} className="pick-image" />
-            <div className="overlay">
+          <Link
+            to={pick.link}
+            key={index}
+            className="pick-card"
+            style={{
+              backgroundColor: pick.color,
+              animationDelay: `${index * 0.1}s`
+            }}
+          >
+            <div className="card-content">
               <div className="pick-label">{pick.title}</div>
             </div>
           </Link>

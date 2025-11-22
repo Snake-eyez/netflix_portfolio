@@ -1,0 +1,319 @@
+.workshops-container {
+    min-height: 100vh;
+    background-color: #141414;
+    color: #fff;
+    padding: 120px 40px 80px;
+    position: relative;
+}
+
+.btn-back-workshops {
+    position: absolute;
+    top: 100px;
+    left: 40px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background-color: rgba(255, 255, 255, 0.1);
+    color: #fff;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    padding: 12px 24px;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    z-index: 10;
+}
+
+.btn-back-workshops:hover {
+    background-color: rgba(234, 88, 12, 0.9);
+    border-color: #ea580c;
+    transform: translateX(-5px);
+}
+
+.workshops-hero {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.workshops-title {
+    font-size: 4rem;
+    font-weight: 700;
+    background: linear-gradient(135deg, #ea580c 0%, #f97316 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    margin-bottom: 20px;
+}
+
+.workshops-subtitle {
+    font-size: 1.5rem;
+    color: #d2d2d2;
+    font-weight: 400;
+}
+
+.workshops-grid {
+    max-width: 1400px;
+    margin: 0 auto 80px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+    gap: 40px;
+}
+
+.workshop-card {
+    background: linear-gradient(135deg, #1a1a1a 0%, #2a2a2a 100%);
+    border-radius: 16px;
+    overflow: hidden;
+    border: 2px solid rgba(234, 88, 12, 0.3);
+    transition: all 0.4s ease;
+    opacity: 0;
+    animation: fadeInUp 0.6s forwards ease-in-out;
+    animation-delay: var(--delay);
+}
+
+.workshop-card:hover {
+    transform: translateY(-10px);
+    border-color: #ea580c;
+    box-shadow: 0 20px 50px rgba(234, 88, 12, 0.3);
+}
+
+.workshop-image-container {
+    position: relative;
+    height: 250px;
+    overflow: hidden;
+}
+
+.workshop-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.workshop-card:hover .workshop-image {
+    transform: scale(1.1);
+}
+
+.workshop-status-badge {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: linear-gradient(135deg, #ea580c 0%, #f97316 100%);
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 25px;
+    font-weight: 700;
+    font-size: 0.9rem;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+.workshop-content {
+    padding: 40px;
+}
+
+.workshop-title {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: #fff;
+    margin-bottom: 15px;
+}
+
+.workshop-description {
+    font-size: 1.05rem;
+    color: #d2d2d2;
+    line-height: 1.7;
+    margin-bottom: 25px;
+}
+
+.workshop-meta {
+    display: flex;
+    gap: 25px;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+}
+
+.meta-item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: #d2d2d2;
+    font-size: 0.95rem;
+}
+
+.meta-item svg {
+    color: #ea580c;
+    font-size: 1.1rem;
+}
+
+.workshop-level {
+    margin-bottom: 25px;
+}
+
+.level-badge {
+    display: inline-block;
+    background: rgba(234, 88, 12, 0.2);
+    color: #ea580c;
+    padding: 8px 18px;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    border: 1px solid rgba(234, 88, 12, 0.4);
+}
+
+.workshop-topics {
+    margin-bottom: 30px;
+    padding: 25px;
+    background: rgba(255, 255, 255, 0.03);
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.workshop-topics h3 {
+    font-size: 1.1rem;
+    color: #ea580c;
+    margin-bottom: 15px;
+    font-weight: 600;
+}
+
+.workshop-topics ul {
+    list-style: none;
+    padding: 0;
+}
+
+.workshop-topics li {
+    font-size: 1rem;
+    color: #d2d2d2;
+    margin-bottom: 10px;
+    padding-left: 0;
+}
+
+.workshop-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    background: linear-gradient(135deg, #ea580c 0%, #f97316 100%);
+    color: #fff;
+    border: none;
+    padding: 15px 30px;
+    border-radius: 8px;
+    font-size: 1.1rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    width: 100%;
+    justify-content: center;
+}
+
+.workshop-btn:not(:disabled):hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 30px rgba(234, 88, 12, 0.5);
+}
+
+.workshop-btn:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+/* CTA Section */
+.workshops-cta {
+    max-width: 800px;
+    margin: 80px auto 0;
+    text-align: center;
+    padding: 60px 40px;
+    background: linear-gradient(135deg, rgba(234, 88, 12, 0.1) 0%, rgba(249, 115, 22, 0.05) 100%);
+    border: 2px solid rgba(234, 88, 12, 0.3);
+    border-radius: 16px;
+}
+
+.workshops-cta h2 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #fff;
+    margin-bottom: 15px;
+}
+
+.workshops-cta p {
+    font-size: 1.3rem;
+    color: #d2d2d2;
+    margin-bottom: 30px;
+}
+
+.cta-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    background: linear-gradient(135deg, #ea580c 0%, #f97316 100%);
+    color: #fff;
+    border: none;
+    padding: 18px 40px;
+    border-radius: 8px;
+    font-size: 1.2rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.cta-btn:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 40px rgba(234, 88, 12, 0.5);
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+    .workshops-grid {
+        grid-template-columns: 1fr;
+        max-width: 600px;
+    }
+}
+
+@media (max-width: 768px) {
+    .workshops-container {
+        padding: 100px 20px 60px;
+    }
+
+    .btn-back-workshops {
+        top: 20px;
+        left: 20px;
+    }
+
+    .workshops-title {
+        font-size: 2.5rem;
+    }
+
+    .workshops-subtitle {
+        font-size: 1.2rem;
+    }
+
+    .workshop-content {
+        padding: 30px 20px;
+    }
+
+    .workshop-title {
+        font-size: 1.5rem;
+    }
+
+    .workshop-meta {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .workshops-cta {
+        padding: 40px 20px;
+    }
+
+    .workshops-cta h2 {
+        font-size: 2rem;
+    }
+}

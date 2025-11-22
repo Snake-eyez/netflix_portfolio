@@ -39,7 +39,7 @@ const Navbar: React.FC = () => {
           <ul className="navbar-links">
             <li><Link to="/work-experience">Professional</Link></li>
             <li><Link to="/skills">Skills</Link></li>
-            <li><Link to="/projects">Projects</Link></li>
+            <li><Link to="/products">Buy</Link></li>
             <li><Link to="/contact-me">Hire Me</Link></li>
           </ul>
         </div>
@@ -65,7 +65,7 @@ const Navbar: React.FC = () => {
         <ul>
           <li><Link to="/work-experience" onClick={closeSidebar}><FaBriefcase /> Professional</Link></li>
           <li><Link to="/skills" onClick={closeSidebar}><FaTools /> Skills</Link></li>
-          <li><Link to="/projects" onClick={closeSidebar}><FaProjectDiagram /> Projects</Link></li>
+          <li><Link to="/products" onClick={closeSidebar}><FaProjectDiagram /> Buy</Link></li>
           <li><Link to="/contact-me" onClick={closeSidebar}><FaEnvelope /> Hire Me</Link></li>
         </ul>
       </div>

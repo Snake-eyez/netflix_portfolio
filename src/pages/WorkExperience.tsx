@@ -1,82 +1,167 @@
-import React, { useEffect, useState } from 'react';
-import { VerticalTimeline, VerticalTimelineElement } from 'react-vertical-timeline-component';
-import 'react-vertical-timeline-component/style.min.css';
-import { MdOutlineWork as WorkIcon } from 'react-icons/md';
-import { IoSchool as SchoolIcon } from 'react-icons/io5';
-import { FaStar as StarIcon } from 'react-icons/fa';
+import React from 'react';
+import { FaPlay, FaArrowLeft } from 'react-icons/fa';
+import { useNavigate } from 'react-router-dom';
 import './WorkExperience.css';
-import { TimelineItem } from '../types';
-import { getTimeline } from '../queries/getTimeline';
 
+const cvData = [
+  {
+    title: "AI Architect & Founder",
+    company: "ChatiX / Chatix Creations",
+    date: "Jul 2018 - Present",
+    description: "I design and realize AI architectures for clients such as KPN, ThirdPlace, SME organizations, and internal ChatiX products. Responsibilities include: Designing multi-agent voice assistants, RAG pipelines, and local LLM integrations. Creating prompt kits and AI playbooks.",
+    techStack: "Python, Mistral/Llama, RAG, Voicebots, Azure, Google Cloud"
+  },
+  {
+    title: "AI Trainer & Adoption Specialist",
+    company: "Capgemini / KPN / Municipality of Rotterdam",
+    date: "Jan 2025 - Dec 2025",
+    description: "Trainer for AI modules (Copilot, RAG, MCP). Delivered workshops for groups of 60+ participants on AI productivity and safe usage within public services.",
+    techStack: "Copilot, Prompt Engineering, GenAI Training"
+  },
+  {
+    title: "IT & Business Manager",
+    company: "SpeedyKoeriers B.V.",
+    date: "May 2023 - Nov 2025",
+    description: "Managed the full IT and innovation agenda. Designed a custom CRM platform with AI agents for planning and communication. Realized API integration with PostNL and modernized processes with Llama-based models.",
+    techStack: "PostgreSQL, AI Agents, Llama, API Integration"
+  },
+  {
+    title: "Sr. VMware Engineer \\ Consultant",
+    company: "Tax and Customs Administration (Belastingdienst)",
+    date: "Oct 2024 - Apr 2025",
+    description: "Built NSX & Aria VMware platform, integrated with CI/CD, RedHat Linux, and Windows Administration. Initiated GPU project for AI integration.",
+    techStack: "VMware NSX, Aria, CI/CD, RedHat, GPU"
+  },
+  {
+    title: "Cloud Engineer",
+    company: "Louwman ICT (Axians)",
+    date: "Jan 2022 - Dec 2023",
+    description: "Managed the full cloud and server stack. Led Windows Hello for Business implementation, automated with PowerShell, and optimized Azure AD/Entra ID security.",
+    techStack: "Azure, PowerShell, Windows Hello, Entra ID"
+  },
+  {
+    title: "Consultant Engineer",
+    company: "House of Representatives (Tweede Kamer)",
+    date: "Jan 2019 - Dec 2022",
+    description: "Managed Azure, VMware, Citrix, Active Directory. Managed Citrix XenMobile environment and packaged applications with Ivanti and App-V.",
+    techStack: "Azure, VMware, Citrix, Ivanti, App-V"
+  },
+  {
+    title: "Senior System Administrator",
+    company: "Inlumi",
+    date: "Jan 2016 - Dec 2019",
+    description: "Managed enterprise environments, automation, monitoring, backup strategies, scripting, and security monitoring.",
+    techStack: "Enterprise Infrastructure, Scripting, Security"
+  },
+  {
+    title: "Team Lead / Senior System Administrator",
+    company: "Pink & Nelson",
+    date: "Jan 2011 - Dec 2016",
+    description: "Led system administration teams, managed projects, AD/GPO management, network management, and process optimization.",
+    techStack: "Team Leadership, AD/GPO, Network Management"
+  },
+  {
+    title: "System Engineer / Microsoft Specialist",
+    company: "Tellus B.V.",
+    date: "Jan 2009 - Dec 2011",
+    description: "Server administration, datacenter design, AD/GPO management, DNS/DHCP, Linux, monitoring, and incident resolution.",
+    techStack: "Microsoft Server, Datacenter Design, Linux"
+  },
+  {
+    title: "System Administrator",
+    company: "Municipality of Rotterdam",
+    date: "Jan 2008 - Dec 2009",
+    description: "Windows server administration, user management, network security, support team assistance.",
+    techStack: "Windows Server, Network Security"
+  },
+  {
+    title: "System Administrator / Migration Lead",
+    company: "Sandvik / Nutricia / Atlas Copco (Qmagic)",
+    date: "Jan 2005 - Dec 2008",
+    description: "Led migration projects, email migrations, Windows XP transitions, support, and project coordination.",
+    techStack: "Migration Projects, Windows Support"
+  }
+];
 
 const WorkExperience: React.FC = () => {
-
-  const [timeLineData, setTimeLineData] = useState<TimelineItem[] | null>(null);
-
-  useEffect(() => {
-    async function fetchTimelineItem() {
-      const data = await getTimeline();
-      setTimeLineData(data);
-    }
-    fetchTimelineItem();
-  }, []);
-
-
-  if (!timeLineData) return <div>Loading...</div>;
-  console.log("🚀 ~ timeLineData:", timeLineData)
+  const navigate = useNavigate();
 
   return (
-    <>
-      <div className="timeline-container">
-        <h2 className="timeline-title">📅 Work Experience & Education Timeline</h2>
+    <div className="work-experience-container">
+      {/* Hero Section */}
+      <div className="we-hero">
+        <h1 className="we-title">Derrel Winter</h1>
+        <div className="we-meta">
+          <span className="match-score">100% Match</span>
+          <span>2005 - Present</span>
+          <span style={{ border: '1px solid #a3a3a3', padding: '0 5px', fontSize: '0.8rem' }}>AI & IT</span>
+          <span>11 Episodes</span>
+        </div>
+
+        <div className="we-actions">
+          <a href="/DERREL_WINTER_cv.pdf" target="_blank" rel="noopener noreferrer" className="btn-primary">
+            <FaPlay /> View CV
+          </a>
+          <button onClick={() => navigate('/profile/Professional')} className="btn-primary" style={{ backgroundColor: 'rgba(109, 109, 110, 0.7)', color: '#fff', border: 'none', cursor: 'pointer' }}>
+            <FaArrowLeft /> Back to Professional
+          </button>
+        </div>
+
+        <div className="we-description" style={{ maxWidth: '800px', fontSize: '1.1rem', lineHeight: '1.6', textShadow: '1px 1px 2px rgba(0,0,0,0.5)', marginBottom: '20px' }}>
+          <p style={{ marginBottom: '15px' }}>
+            I am a hybrid AI and IT specialist with over 25 years of experience in enterprise infrastructures, cloud engineering, and workflow automation.
+            As the founder of ChatiX, I design and build modern AI systems such as RAG solutions, multi-agent workflows, and voice assistants.
+          </p>
+          <p style={{ fontSize: '0.95rem', color: '#d2d2d2' }}>
+            <strong>Skills:</strong> Prompt Engineering, Python, JavaScript, Azure, Google Cloud, VMware, DevOps, Storytelling.
+          </p>
+        </div>
       </div>
-      <VerticalTimeline>
-        {timeLineData.map((item, index) => (
-          <VerticalTimelineElement
-            key={index}
-            className={`vertical-timeline-element--${item.timelineType}`}
-            contentStyle={
-              item.timelineType === "work"
-                ? index === 0
-                  ? { background: 'rgb(33, 150, 243)', color: '#fff' }
-                  : { background: 'rgb(240, 240, 240)', color: '#fff' }
-                : { background: 'rgb(255, 224, 230)', color: '#fff' } // Lighter red for education
-            }
-            contentArrowStyle={
-              item.timelineType === "work"
-                ? { borderRight: index === 0 ? '7px solid rgb(33, 150, 243)' : '7px solid rgb(240, 240, 240)' }
-                : { borderRight: '7px solid rgb(255, 224, 230)' }
-            }
-            date={item.dateRange}
-            iconStyle={
-              item.timelineType === "work"
-                ? { background: 'rgb(33, 150, 243)', color: '#fff' }
-                : { background: 'rgb(255, 160, 200)', color: '#fff' } // Softer red for education icon
-            }
-            icon={item.timelineType === "work" ? <WorkIcon /> : <SchoolIcon />}
-          >
-            {item.timelineType === "work" ? (
-              <div style={{ color: 'black' }}>
-                <h3 className="vertical-timeline-element-title">{item.title}</h3>
-                <h4 className="vertical-timeline-element-subtitle">{item.name}</h4>
-                <p className="vertical-timeline-element-tech">🔧 {item.techStack}</p>
-                <p>{item.summaryPoints}</p>
+
+      {/* Episodes List */}
+      <div className="episodes-section">
+        <div className="episodes-header">
+          <span className="episodes-title">Career Episodes</span>
+          <span style={{ fontSize: '1.1rem', color: '#a3a3a3' }}>Season 1</span>
+        </div>
+
+        <div className="episode-list">
+          {cvData.map((item, index) => (
+            <div className="episode-item" key={index}>
+              <div className="episode-number">{index + 1}</div>
+              <div className="episode-thumbnail">
+                <div style={{
+                  width: '100%',
+                  height: '100%',
+                  background: `linear-gradient(135deg, ${index % 2 === 0 ? '#B81D24' : '#221F1F'} 0%, #000 100%)`,
+                  display: 'flex',
+                  alignItems: 'center',
+                  justifyContent: 'center',
+                  fontSize: '2rem',
+                  color: 'rgba(255,255,255,0.8)'
+                }}>
+                  {index === 0 ? '🚀' : '💼'}
+                </div>
               </div>
-            ) : (
-              <div style={{ color: 'black' }}>
-                <h3 className="vertical-timeline-element-title">{item.name}</h3>
-                <h4 className="vertical-timeline-element-subtitle">{item.title}</h4>
-                <p>{item.summaryPoints}</p>
+              <div className="episode-info">
+                <div className="episode-header">
+                  <span className="episode-name">{item.title}</span>
+                  <span className="episode-duration">{item.date}</span>
+                </div>
+                <div style={{ color: '#e5e5e5', fontWeight: '600', marginBottom: '5px' }}>{item.company}</div>
+                <p className="episode-desc">
+                  {item.description}
+                  <br />
+                  <span style={{ color: '#777', fontSize: '0.85rem', marginTop: '8px', display: 'inline-block' }}>
+                    Tech Stack: {item.techStack}
+                  </span>
+                </p>
               </div>
-            )}
-          </VerticalTimelineElement>
-        ))}
-        <VerticalTimelineElement
-          iconStyle={{ background: 'rgb(16, 204, 82)', color: '#fff' }}
-          icon={<StarIcon />}
-        />
-      </VerticalTimeline>
-    </>
+            </div>
+          ))}
+        </div>
+      </div>
+    </div>
   );
 };
 

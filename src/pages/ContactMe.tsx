@@ -1,65 +1,174 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
+import { FaArrowLeft, FaEnvelope, FaPaperPlane } from 'react-icons/fa';
+import { useNavigate } from 'react-router-dom';
 import './ContactMe.css';
-import profilePic from '../images/sumanth.jpeg';
-import { FaEnvelope, FaPhoneAlt, FaCoffee, FaLinkedin } from 'react-icons/fa';
-import { ContactMe as IContactMe } from '../types';
-import { getContactMe } from '../queries/getContactMe';
 
 const ContactMe: React.FC = () => {
+  const navigate = useNavigate();
+  const [formData, setFormData] = useState({
+    name: '',
+    email: '',
+    subject: '',
+    message: ''
+  });
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle');
 
-  const [userData, setUserData] = useState<IContactMe>()
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+    setFormData({
+      ...formData,
+      [e.target.name]: e.target.value
+    });
+  };
 
-  useEffect(() => {
-    async function fetchUserData() {
-      const data = await getContactMe();
-      setUserData(data);
-    }
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    setIsSubmitting(true);
 
-    fetchUserData();
-  }, []);
+    // Simulate form submission
+    setTimeout(() => {
+      setIsSubmitting(false);
+      setSubmitStatus('success');
+      setFormData({ name: '', email: '', subject: '', message: '' });
 
-  if (!userData) return <div>Loading...</div>;
+      // Reset success message after 5 seconds
+      setTimeout(() => setSubmitStatus('idle'), 5000);
+    }, 1500);
+  };
 
   return (
     <div className="contact-container">
-      <div className="linkedin-badge-custom">
-        <img src={profilePic} alt="Sumanth Samala" className="badge-avatar" />
-        <div className="badge-content">
-          <h3 className="badge-name">{userData?.name}</h3>
-          <p className="badge-title">{userData.title}</p>
-          <p className="badge-description">
-            {userData.summary}
-          </p>
-          <p className="badge-company">{userData.companyUniversity}</p>
-          <a
-            href={userData.linkedinLink}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="badge-link"
-          >
-            <FaLinkedin className="linkedin-icon" /> View Profile
-          </a>
+      <button onClick={() => navigate(-1)} className="btn-back-contact">
+        <FaArrowLeft /> Back
+      </button>
+
+      <div className="contact-split">
+        {/* Left Side - Contact Form */}
+        <div className="contact-left">
+          <div className="contact-content">
+            <h1 className="contact-title">Let's Work Together</h1>
+            <p className="contact-subtitle">
+              I'm always open to discussing new projects, creative ideas, or opportunities
+              to be part of your vision. Whether you need AI solutions, full-stack development,
+              or strategic consulting—let's connect.
+            </p>
+
+            <div className="contact-info-block">
+              <div className="info-item">
+                <FaEnvelope className="info-icon" />
+                <div>
+                  <div className="info-label">Email</div>
+                  <a href="mailto:hello@derrelwinter.com" className="info-value">
+                    hello@derrelwinter.com
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <div className="coffee-section">
+              <p className="coffee-text">Or catch up over a coffee ☕</p>
+              <a
+                href="https://derrelwinter.gumroad.com/coffee"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="coffee-btn"
+              >
+                ☕ Buy Me a Coffee
+              </a>
+            </div>
+
+            <form className="contact-form" onSubmit={handleSubmit}>
+              <div className="form-row">
+                <div className="form-group">
+                  <label htmlFor="name">Your Name</label>
+                  <input
+                    type="text"
+                    id="name"
+                    name="name"
+                    value={formData.name}
+                    onChange={handleChange}
+                    placeholder="John Doe"
+                    required
+                  />
+                </div>
+                <div className="form-group">
+                  <label htmlFor="email">Your Email</label>
+                  <input
+                    type="email"
+                    id="email"
+                    name="email"
+                    value={formData.email}
+                    onChange={handleChange}
+                    placeholder="john@example.com"
+                    required
+                  />
+                </div>
+              </div>
+
+              <div className="form-group">
+                <label htmlFor="subject">Subject</label>
+                <input
+                  type="text"
+                  id="subject"
+                  name="subject"
+                  value={formData.subject}
+                  onChange={handleChange}
+                  placeholder="Project Inquiry"
+                  required
+                />
+              </div>
+
+              <div className="form-group">
+                <label htmlFor="message">Message</label>
+                <textarea
+                  id="message"
+                  name="message"
+                  value={formData.message}
+                  onChange={handleChange}
+                  placeholder="Tell me about your project..."
+                  rows={6}
+                  required
+                />
+              </div>
+
+              <button
+                type="submit"
+                className="submit-btn"
+                disabled={isSubmitting}
+              >
+                {isSubmitting ? (
+                  <>Sending...</>
+                ) : (
+                  <>
+                    <FaPaperPlane /> Send Message
+                  </>
+                )}
+              </button>
+
+              {submitStatus === 'success' && (
+                <div className="success-message">
+                  ✓ Message sent successfully! I'll get back to you soon.
+                </div>
+              )}
+            </form>
+          </div>
         </div>
-      </div>
-      <div className="contact-header">
-        <p>I'm always up for a chat or a coffee! Feel free to reach out.</p>
-      </div>
-      <div className="contact-details">
-        <div className="contact-item">
-          <FaEnvelope className="contact-icon" />
-          <a href={`mailto:${userData.email}`} className="contact-link">
-            {userData.email}
-          </a>
-        </div>
-        <div className="contact-item">
-          <FaPhoneAlt className="contact-icon" />
-          <a href={`tel:${userData.phoneNumber}`} className="contact-link">
-            {userData.phoneNumber}
-          </a>
-        </div>
-        <div className="contact-fun">
-          <p>Or catch up over a coffee ☕</p>
-          <FaCoffee className="coffee-icon" />
+
+        {/* Right Side - Photo */}
+        <div className="contact-right">
+          <div className="photo-container">
+            <img
+              src="/derrel-photo.jpg"
+              alt="Derrel Winter"
+              className="contact-photo"
+            />
+            <div className="photo-overlay">
+              <div className="overlay-text">
+                <h2>Derrel Winter</h2>
+                <p>AI Architect & Full-Stack Developer</p>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>

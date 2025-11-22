@@ -1,108 +1,207 @@
 /* Reading.css */
 
-.reading-container {
-  padding: 5rem 2rem;
-  color: #333;
-  text-align: center;
-  /* background: linear-gradient(to bottom right, #fdfbfb, #ebedee); */
+.reading-page-container {
+  min-height: 100vh;
+  background-color: #141414;
+  color: #fff;
+  padding: 120px 40px 80px;
+  position: relative;
 }
 
-.reading-title {
-  font-size: 2.5rem;
-  color: #ff6f61;
-  font-weight: bold;
-  margin-bottom: 0.5rem;
-  animation: slideDown 0.8s ease-in-out;
-}
-
-.reading-intro {
-  font-size: 1.1rem;
-  color:white;
-  margin-bottom: 2rem;
-}
-
-.books-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 1.5rem;
-}
-
-.book-card {
-  background: #fff;
-  border-radius: 10px;
-  overflow: hidden;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  animation: fadeInUp 0.5s ease forwards;
-  opacity: 0;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-  cursor: pointer;
-  animation: popUp 2s ease forwards;
-}
-
-.book-card:hover {
-  transform: translateY(-10px);
-  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
-  transform: scale(1.05); /* Zoom-in effect */
-  box-shadow: 0rem 0rem 20rem 20px rgba(211, 29, 29, 0.4)
-}
-
-.book-cover {
-  width: 100%;
-  height: 300px;
-  object-fit: cover;
-}
-
-.book-info {
-  padding: 1rem;
-}
-
-.book-title {
-  font-size: 1.2rem;
-  color: #333;
-  margin: 0.5rem 0;
-}
-
-.book-author {
+.btn-back-reading {
+  position: absolute;
+  top: 40px;
+  left: 40px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background-color: rgba(255, 255, 255, 0.1);
+  color: #fff;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  padding: 12px 24px;
+  border-radius: 8px;
   font-size: 1rem;
-  color: #888;
-  margin-bottom: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  z-index: 10;
 }
 
-.book-description {
+.btn-back-reading:hover {
+  background-color: rgba(234, 88, 12, 0.9);
+  border-color: #ea580c;
+  transform: translateX(-5px);
+}
+
+.reading-hero {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.reading-page-title {
+  font-size: 4rem;
+  font-weight: 700;
+  background: linear-gradient(135deg, #ea580c 0%, #f97316 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin-bottom: 20px;
+}
+
+.reading-page-subtitle {
+  font-size: 1.5rem;
+  color: #d2d2d2;
+}
+
+.books-page-grid {
+  max-width: 1400px;
+  margin: 0 auto 80px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+}
+
+.book-page-card {
+  background: linear-gradient(135deg, #1a1a1a 0%, #2a2a2a 100%);
+  border-radius: 12px;
+  overflow: hidden;
+  border: 2px solid rgba(234, 88, 12, 0.3);
+  transition: all 0.4s ease;
+  opacity: 0;
+  animation: fadeInUp 0.6s forwards ease-in-out;
+  animation-delay: var(--delay);
+}
+
+.book-page-card:hover {
+  transform: translateY(-8px);
+  border-color: #ea580c;
+  box-shadow: 0 15px 30px rgba(234, 88, 12, 0.3);
+}
+
+.book-cover-container {
+  position: relative;
+  height: 250px;
+  overflow: hidden;
+}
+
+.book-cover-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.book-page-card:hover .book-cover-image {
+  transform: scale(1.05);
+}
+
+.book-genre-badge {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  background: linear-gradient(135deg, #ea580c 0%, #f97316 100%);
+  color: #fff;
+  padding: 6px 12px;
+  border-radius: 20px;
   font-size: 0.9rem;
+  font-weight: 600;
+}
+
+.book-page-info {
+  padding: 20px;
+}
+
+.book-page-title {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: #fff;
+  margin-bottom: 5px;
+}
+
+.book-page-author {
+  font-size: 1rem;
+  color: #d2d2d2;
+  margin-bottom: 10px;
+}
+
+.book-rating .star {
   color: #555;
-  transition: color 0.3s ease;
+  font-size: 1rem;
 }
 
-.book-card:hover .book-description {
-  color: #ff6f61;
+.book-rating .star.filled {
+  color: #f5c518;
 }
 
-/* Telugu books */
-.book-title:lang(te) {
-  font-family: 'Noto Sans Telugu', sans-serif;
-  color: #4a90e2;
+.book-page-description {
+  font-size: 0.95rem;
+  color: #d2d2d2;
+  line-height: 1.6;
+}
+
+.reading-cta {
+  max-width: 800px;
+  margin: 80px auto 0;
+  text-align: center;
+  padding: 50px 30px;
+  background: linear-gradient(135deg, rgba(234, 88, 12, 0.1) 0%, rgba(249, 115, 22, 0.05) 100%);
+  border: 2px solid rgba(234, 88, 12, 0.3);
+  border-radius: 16px;
+}
+
+.reading-cta h2 {
+  font-size: 2.5rem;
+  color: #fff;
+  margin-bottom: 15px;
+}
+
+.reading-cta p {
+  font-size: 1.3rem;
+  color: #d2d2d2;
+  margin-bottom: 25px;
+}
+
+.reading-cta-btn {
+  background: linear-gradient(135deg, #ea580c 0%, #f97316 100%);
+  color: #fff;
+  border: none;
+  padding: 15px 35px;
+  border-radius: 8px;
+  font-size: 1.2rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.reading-cta-btn:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 30px rgba(234, 88, 12, 0.4);
 }
 
 @keyframes fadeInUp {
-  0% {
+  from {
     opacity: 0;
-    transform: translateY(20px);
+    transform: translateY(30px);
   }
-  100% {
+
+  to {
     opacity: 1;
     transform: translateY(0);
   }
 }
 
-@keyframes slideDown {
-  0% {
-    opacity: 0;
-    transform: translateY(-20px);
+/* Responsive */
+@media (max-width: 768px) {
+  .reading-page-title {
+    font-size: 2.5rem;
   }
-  100% {
-    opacity: 1;
-    transform: translateY(0);
+
+  .reading-page-subtitle {
+    font-size: 1.2rem;
+  }
+
+  .btn-back-reading {
+    top: 20px;
+    left: 20px;
   }
 }

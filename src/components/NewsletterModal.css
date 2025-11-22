@@ -1,0 +1,143 @@
+.newsletter-modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.85);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    animation: fadeIn 0.3s ease-out;
+}
+
+.newsletter-modal-content {
+    background-color: #181818;
+    padding: 40px;
+    border-radius: 8px;
+    width: 100%;
+    max-width: 500px;
+    position: relative;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    animation: slideUp 0.3s ease-out;
+}
+
+.newsletter-close-btn {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    background: none;
+    border: none;
+    color: #aaa;
+    font-size: 1.5rem;
+    cursor: pointer;
+    transition: color 0.2s;
+}
+
+.newsletter-close-btn:hover {
+    color: #fff;
+}
+
+.newsletter-title {
+    color: #fff;
+    font-size: 2rem;
+    margin-bottom: 10px;
+    font-weight: 700;
+}
+
+.newsletter-subtitle {
+    color: #aaa;
+    margin-bottom: 30px;
+    font-size: 1rem;
+}
+
+.newsletter-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.form-label {
+    color: #cfcfcf;
+    font-size: 0.9rem;
+}
+
+.form-input {
+    background-color: #333;
+    border: 1px solid #333;
+    border-radius: 4px;
+    padding: 12px 15px;
+    color: #fff;
+    font-size: 1rem;
+    transition: border-color 0.2s, background-color 0.2s;
+}
+
+.form-input:focus {
+    outline: none;
+    background-color: #454545;
+    border-color: #e50914;
+}
+
+.newsletter-submit-btn {
+    background-color: #e50914;
+    color: #fff;
+    border: none;
+    padding: 15px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: background-color 0.2s;
+}
+
+.newsletter-submit-btn:hover {
+    background-color: #f40612;
+}
+
+.newsletter-submit-btn:disabled {
+    background-color: #555;
+    cursor: not-allowed;
+}
+
+.error-message {
+    color: #e50914;
+    font-size: 0.9rem;
+    margin-top: -10px;
+}
+
+.success-message {
+    text-align: center;
+    color: #46d369;
+    font-size: 1.2rem;
+    padding: 20px 0;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideUp {
+    from {
+        transform: translateY(50px);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}

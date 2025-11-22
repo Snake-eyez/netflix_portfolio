@@ -1,46 +1,50 @@
 .top-picks-row {
-  margin: 40px 0;
-  padding: 0 40px;
+  margin: 3vw 0;
+  padding: 0 4%;
+  position: relative;
+  z-index: 5;
+  margin-top: -150px;
+  /* Overlap with banner like Netflix */
 }
 
 .row-title {
-  font-size: 1.5rem;
-  color: var(--secondary-color);
-  margin-bottom: 20px;
-  animation: fadeIn 1s ease-in-out;
-  font-weight: 600;
+  font-size: 1.4vw;
+  color: #e5e5e5;
+  margin-bottom: 0.5em;
+  font-weight: 700;
+  line-height: 1.25vw;
 }
 
 .card-row {
   display: flex;
-  gap: 20px;
-  padding-bottom: 20px;
+  gap: 10px;
+  /* Netflix gap */
   width: 100%;
 }
 
 .pick-card {
   position: relative;
   flex: 1;
-  /* Distribute space equally */
-  height: 180px;
-  border-radius: 8px;
+  aspect-ratio: 16 / 9;
+  /* Netflix standard aspect ratio */
+  border-radius: 4px;
+  /* Small border radius */
   overflow: hidden;
   cursor: pointer;
   transition: transform 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94), box-shadow 0.3s ease;
-  animation: slideIn 0.5s ease forwards;
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  border: none;
+  /* Netflix cards don't usually have borders */
   display: flex;
   align-items: center;
   justify-content: center;
-  opacity: 0;
-  /* Start hidden for animation */
 }
 
 .pick-card:hover {
-  transform: scale(1.05);
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
-  z-index: 10;
-  filter: brightness(1.1);
+  transform: scale(1.1);
+  /* Reduced scale from 1.4 */
+  z-index: 99;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.7);
+  transition-delay: 0.1s;
 }
 
 .card-content {
@@ -48,24 +52,28 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 15px;
+  gap: 10px;
   text-align: center;
-  padding: 20px;
+  padding: 10px;
+  width: 100%;
+  height: 100%;
+  /* Add a subtle overlay to enhance text readability on gradients */
+  background: radial-gradient(circle, rgba(0, 0, 0, 0.1) 0%, rgba(0, 0, 0, 0.3) 100%);
 }
 
 .pick-icon {
-  font-size: 2.5rem;
-  color: rgba(255, 255, 255, 0.9);
-  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.3));
+  font-size: 2vw;
+  color: rgba(255, 255, 255, 0.95);
+  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.5));
 }
 
 .pick-label {
   color: #fff;
-  font-size: 1.2rem;
+  font-size: 1vw;
   font-weight: 700;
-  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.6);
   text-transform: uppercase;
-  letter-spacing: 1px;
+  letter-spacing: 0.5px;
 }
 
 /* Animations */
@@ -93,13 +101,36 @@
   }
 }
 
+/* Mobile Adjustments */
 @media (max-width: 768px) {
+  .top-picks-row {
+    margin-top: 0;
+    padding: 20px;
+  }
+
+  .row-title {
+    font-size: 1.2rem;
+  }
+
   .card-row {
     flex-direction: column;
   }
 
   .pick-card {
     width: 100%;
+    aspect-ratio: auto;
     height: 120px;
+  }
+
+  .pick-card:hover {
+    transform: scale(1.02);
+  }
+
+  .pick-icon {
+    font-size: 2rem;
+  }
+
+  .pick-label {
+    font-size: 1rem;
   }
 }

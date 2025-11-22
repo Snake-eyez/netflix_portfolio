@@ -1,8 +1,8 @@
-import React from 'react';
+import React, { useState } from 'react';
+import { FaPlay, FaEnvelope } from 'react-icons/fa';
 import './ProfileBanner.css';
-import PlayButton from '../components/PlayButton';
-import MoreInfoButton from '../components/MoreInfoButton';
 import { ProfileType } from '../types';
+import NewsletterModal from '../components/NewsletterModal';
 
 interface ProfileBannerProps {
   profile: ProfileType;
@@ -37,29 +37,25 @@ const bannerConfig = {
 
 const ProfileBanner: React.FC<ProfileBannerProps> = ({ profile }) => {
   const config = bannerConfig[profile];
-
-  const handlePrimaryClick = () => {
-    // Navigate or open link based on profile
-    console.log(`Clicked Primary for ${profile}`);
-  };
-
-  const handleSecondaryClick = () => {
-    // Navigate or open link based on profile
-    console.log(`Clicked Secondary for ${profile}`);
-  }
+  const [isNewsletterOpen, setIsNewsletterOpen] = useState(false);
 
   return (
     <div className="profile-banner">
       <div className="banner-content">
-        <h1 className="banner-headline" id='headline'>{config.headline}</h1>
+        <h1 className="banner-headline">{config.headline}</h1>
         <p className="banner-description">
           {config.description}
         </p>
-
         <div className="banner-buttons">
-          <PlayButton onClick={handlePrimaryClick} label={config.primaryCta} />
+          <button className="banner-button play-button">
+            <FaPlay style={{ marginRight: '10px', fontSize: '1.2rem' }} /> {config.primaryCta}
+          </button>
+          <button className="banner-button info-button" onClick={() => setIsNewsletterOpen(true)}>
+            <FaEnvelope style={{ marginRight: '10px', fontSize: '1.2rem' }} /> Sign Up for Newsletter
+          </button>
         </div>
       </div>
+      <NewsletterModal isOpen={isNewsletterOpen} onClose={() => setIsNewsletterOpen(false)} />
     </div>
   );
 };

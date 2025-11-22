@@ -14,6 +14,13 @@ import Music from './pages/Music';
 import Reading from './pages/Reading';
 import Blogs from './pages/Blogs';
 import Certifications from './pages/Certifications';
+import ConstructAICaseStudy from './pages/ConstructAICaseStudy';
+import LeaseScanCaseStudy from './pages/LeaseScanCaseStudy';
+import AIAvatarCaseStudy from './pages/AIAvatarCaseStudy';
+import Products from './pages/Products';
+import Portfolio from './pages/Portfolio';
+import Workshops from './pages/Workshops';
+import ComingSoon from './pages/ComingSoon';
 
 const App: React.FC = () => {
   return (
@@ -26,11 +33,18 @@ const App: React.FC = () => {
       <Route path="/recommendations" element={<Layout><Recommendations /></Layout>} />
       <Route path="/skills" element={<Layout><Skills /></Layout>} />
       <Route path="/projects" element={<Layout><Projects /></Layout>} />
+      <Route path="/products" element={<Layout><Products /></Layout>} />
       <Route path="/contact-me" element={<Layout><ContactMe /></Layout>} />
       <Route path="/music" element={<Layout><Music /></Layout>} />
       <Route path="/reading" element={<Layout><Reading /></Layout>} />
       <Route path="/blogs" element={<Layout><Blogs /></Layout>} />
       <Route path="/certifications" element={<Layout><Certifications /></Layout>} />
+      <Route path="/case-study/constructai" element={<Layout><ConstructAICaseStudy /></Layout>} />
+      <Route path="/case-study/leasescan" element={<Layout><LeaseScanCaseStudy /></Layout>} />
+      <Route path="/case-study/ai-avatar" element={<Layout><AIAvatarCaseStudy /></Layout>} />
+      <Route path="/portfolio" element={<Layout><Portfolio /></Layout>} />
+      <Route path="/workshops" element={<Layout><Workshops /></Layout>} />
+      <Route path="/coming-soon" element={<Layout><ComingSoon /></Layout>} />
     </Routes>
   );
 };

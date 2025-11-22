@@ -2,18 +2,12 @@ import React from 'react';
 import { FaArrowLeft } from 'react-icons/fa';
 import { useNavigate } from 'react-router-dom';
 import './Movies.css';
-import inception from '../images/inception.jpg';
-import interstellar from '../images/interstellar.jpg';
-import theMatrix from '../images/the_matrix.jpg';
-import theGodfather from '../images/the_godfather.jpg';
-import shawshank from '../images/shawshank_redemption.jpg';
-
 const movies = [
     {
         title: 'Inception',
         year: 2010,
         genre: 'Sci-Fi',
-        imgSrc: inception,
+        imgSrc: 'https://images.unsplash.com/photo-1626814026160-2237a95fc5a0?w=800',
         description: 'A mind‑bending thriller about dreams within dreams.',
         rating: 5
     },
@@ -21,7 +15,7 @@ const movies = [
         title: 'Interstellar',
         year: 2014,
         genre: 'Sci-Fi',
-        imgSrc: interstellar,
+        imgSrc: 'https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=800',
         description: 'An epic journey through space and time to save humanity.',
         rating: 5
     },
@@ -29,7 +23,7 @@ const movies = [
         title: 'The Matrix',
         year: 1999,
         genre: 'Action',
-        imgSrc: theMatrix,
+        imgSrc: 'https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?w=800',
         description: 'Neo discovers the truth about the simulated reality he lives in.',
         rating: 5
     },
@@ -37,7 +31,7 @@ const movies = [
         title: 'The Godfather',
         year: 1972,
         genre: 'Crime',
-        imgSrc: theGodfather,
+        imgSrc: 'https://images.unsplash.com/photo-1507679799987-c73779587ccf?w=800',
         description: 'The saga of a mafia family and the rise of Michael Corleone.',
         rating: 5
     },
@@ -45,7 +39,7 @@ const movies = [
         title: 'The Shawshank Redemption',
         year: 1994,
         genre: 'Drama',
-        imgSrc: shawshank,
+        imgSrc: 'https://images.unsplash.com/photo-1534447677768-be436bb09401?w=800',
         description: 'Hope and friendship thrive behind prison walls.',
         rating: 5
     }

@@ -46,41 +46,7 @@ const cvData = [
     description: "Managed Azure, VMware, Citrix, Active Directory. Managed Citrix XenMobile environment and packaged applications with Ivanti and App-V.",
     techStack: "Azure, VMware, Citrix, Ivanti, App-V"
   },
-  {
-    title: "Senior System Administrator",
-    company: "Inlumi",
-    date: "Jan 2016 - Dec 2019",
-    description: "Managed enterprise environments, automation, monitoring, backup strategies, scripting, and security monitoring.",
-    techStack: "Enterprise Infrastructure, Scripting, Security"
-  },
-  {
-    title: "Team Lead / Senior System Administrator",
-    company: "Pink & Nelson",
-    date: "Jan 2011 - Dec 2016",
-    description: "Led system administration teams, managed projects, AD/GPO management, network management, and process optimization.",
-    techStack: "Team Leadership, AD/GPO, Network Management"
-  },
-  {
-    title: "System Engineer / Microsoft Specialist",
-    company: "Tellus B.V.",
-    date: "Jan 2009 - Dec 2011",
-    description: "Server administration, datacenter design, AD/GPO management, DNS/DHCP, Linux, monitoring, and incident resolution.",
-    techStack: "Microsoft Server, Datacenter Design, Linux"
-  },
-  {
-    title: "System Administrator",
-    company: "Municipality of Rotterdam",
-    date: "Jan 2008 - Dec 2009",
-    description: "Windows server administration, user management, network security, support team assistance.",
-    techStack: "Windows Server, Network Security"
-  },
-  {
-    title: "System Administrator / Migration Lead",
-    company: "Sandvik / Nutricia / Atlas Copco (Qmagic)",
-    date: "Jan 2005 - Dec 2008",
-    description: "Led migration projects, email migrations, Windows XP transitions, support, and project coordination.",
-    techStack: "Migration Projects, Windows Support"
-  }
+
 ];
 
 const WorkExperience: React.FC = () => {

@@ -21,6 +21,13 @@ import Products from './pages/Products';
 import Portfolio from './pages/Portfolio';
 import Workshops from './pages/Workshops';
 import ComingSoon from './pages/ComingSoon';
+import Movies from './pages/Movies';
+import ResourceVault from './pages/ResourceVault';
+import InteractiveLearning from './pages/InteractiveLearning';
+import VisionMission from './pages/VisionMission';
+import IdeaLab from './pages/IdeaLab';
+import Speaking from './pages/Speaking';
+import Outstandr from './pages/Outstandr';
 
 const App: React.FC = () => {
   return (
@@ -45,6 +52,13 @@ const App: React.FC = () => {
       <Route path="/portfolio" element={<Layout><Portfolio /></Layout>} />
       <Route path="/workshops" element={<Layout><Workshops /></Layout>} />
       <Route path="/coming-soon" element={<Layout><ComingSoon /></Layout>} />
+      <Route path="/movies" element={<Layout><Movies /></Layout>} />
+      <Route path="/resource-vault" element={<Layout><ResourceVault /></Layout>} />
+      <Route path="/interactive-learning" element={<Layout><InteractiveLearning /></Layout>} />
+      <Route path="/vision-mission" element={<Layout><VisionMission /></Layout>} />
+      <Route path="/idea-lab" element={<Layout><IdeaLab /></Layout>} />
+      <Route path="/speaking" element={<Layout><Speaking /></Layout>} />
+      <Route path="/outstandr" element={<Layout><Outstandr /></Layout>} />
     </Routes>
   );
 };

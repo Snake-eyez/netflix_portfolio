@@ -45,10 +45,10 @@ const topPicksConfig: Record<ProfileType, Tile[]> = {
     { title: 'Interactive Learning', color: 'linear-gradient(135deg, #8B4513 0%, #C08A50 50%, #DEB887 100%)', icon: <FaCode />, route: '/interactive-learning' },
   ],
   Visionary: [
-    { title: 'Speaking', color: 'linear-gradient(135deg, #B8860B 0%, #D4AF37 50%, #F4C430 100%)', icon: <FaMusic />, route: '/contact-me' },
-    { title: 'Vision & Mission', color: 'linear-gradient(135deg, #0047AB 0%, #2E82FF 50%, #66a3ff 100%)', icon: <FaHandsHelping />, route: '/recommendations' },
-    { title: 'Ideas Lab', color: 'linear-gradient(135deg, #8B4513 0%, #C08A50 50%, #DEB887 100%)', icon: <FaLightbulb />, route: '/blogs' },
-    { title: 'Book Consultation', color: 'linear-gradient(135deg, #800000 0%, #A83B2E 50%, #D2691E 100%)', icon: <FaEnvelope />, route: '/contact-me' },
+    { title: "Vision & Mission", color: "linear-gradient(135deg, #0047AB 0%, #2E82FF 50%, #66a3ff 100%)", icon: <FaHandsHelping />, route: "/vision-mission" },
+    { title: "Idea Lab", color: "linear-gradient(135deg, #8B4513 0%, #C08A50 50%, #DEB887 100%)", icon: <FaLightbulb />, route: "/idea-lab" },
+    { title: "Speaking Events", color: "linear-gradient(135deg, #B8860B 0%, #D4AF37 50%, #F4C430 100%)", icon: <FaMusic />, route: "/speaking" },
+    { title: "Outstandr Vision", color: "linear-gradient(135deg, #800000 0%, #A83B2E 50%, #D2691E 100%)", icon: <FaProjectDiagram />, route: "/outstandr" },
   ],
 };
 

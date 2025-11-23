@@ -297,10 +297,10 @@ const books = [
     genre: "Psychology"
   },
   {
-    title: "The Richest Man in Babylon",
-    author: "George S. Clason",
+    title: "The Richest Man Who Ever Lived",
+    author: "Steven K. Scott",
     imgSrc: "https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?w=800",
-    description: "Timeless principles of wealth building from ancient Babylon.",
+    description: "King Solomon's secrets to success, wealth, and happiness.",
     rating: 5,
     genre: "Finance"
   },
@@ -321,10 +321,10 @@ const books = [
     genre: "Hermetic"
   },
   {
-    title: "The Tablet of Light",
-    author: "Daniele Bolelli",
+    title: "The Emerald Tablet",
+    author: "Hermes Trismegistus",
     imgSrc: "https://images.unsplash.com/photo-1532012197267-da84d127e765?w=800",
-    description: "Ancient wisdom and modern consciousness exploration.",
+    description: "Ancient wisdom and the foundation of alchemy.",
     rating: 5,
     genre: "Spirituality"
   },
@@ -465,8 +465,8 @@ const books = [
     genre: "Relationships"
   },
   {
-    title: "Ten Tribes of Israel",
-    author: "Yair Davidiy",
+    title: "The Ten Tribes of Israel",
+    author: "Timothy R. Jenkins",
     imgSrc: "https://images.unsplash.com/photo-1585036156171-384164a8c675?w=800",
     description: "The history and identity of the lost tribes of Israel.",
     rating: 4,
@@ -513,8 +513,16 @@ const books = [
     genre: "African History"
   },
   {
+    title: "So You Want to Be the Master?",
+    author: "Maponga Joshua III",
+    imgSrc: "https://images.unsplash.com/photo-1532012197267-da84d127e765?w=800",
+    description: "Vhudzijena - A guide to self-mastery and leadership.",
+    rating: 5,
+    genre: "Empowerment"
+  },
+  {
     title: "48 Laws of Black Empowerment",
-    author: "Various Authors",
+    author: "Dante Fortson",
     imgSrc: "https://images.unsplash.com/photo-1532012197267-da84d127e765?w=800",
     description: "Strategies for Black economic and social advancement.",
     rating: 5,

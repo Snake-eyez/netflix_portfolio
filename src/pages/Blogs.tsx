@@ -1,39 +1,29 @@
 import React from 'react';
-import { FaArrowLeft, FaMedium, FaDev, FaExternalLinkAlt } from 'react-icons/fa';
+import { FaArrowLeft, FaMedium, FaDev, FaExternalLinkAlt, FaPenNib } from 'react-icons/fa';
 import { useNavigate } from 'react-router-dom';
 import './Blogs.css';
 
 const blogs = [
   {
-    title: "Make Your Rails Console Look Better",
-    platform: "Medium",
-    icon: <FaMedium />,
-    link: "https://medium.com/@chintusamala96/make-your-rails-console-look-better-510988d40566",
-    description: "Learn tips to customize your Rails console for a better development experience. Enhance productivity with visual improvements and helpful configurations.",
-    date: "2023",
+    title: "Google’s Quiet Coup",
+    platform: "Substack",
+    icon: <FaPenNib />,
+    link: "https://derrelwinter.substack.com/p/googles-quiet-coup",
+    description: "An analysis of Google's strategic shifts and what they mean for the future of search and AI.",
+    date: "Recent",
     readTime: "5 min read",
-    image: "https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=800"
+    image: "https://images.unsplash.com/photo-1573804633927-bfcbcd909acd?w=800"
   },
   {
-    title: "Docker Fundas - My Version",
-    platform: "Medium",
-    icon: <FaMedium />,
-    link: "https://medium.com/@chintusamala96/docker-fundas-my-version-7b9262bd90d4",
-    description: "An introductory guide to Docker fundamentals from my perspective. Understanding containers, images, and deployment workflows.",
-    date: "2023",
-    readTime: "8 min read",
-    image: "https://images.unsplash.com/photo-1605745341112-85968b19335b?w=800"
-  },
-  {
-    title: "Grape Gem in Ruby on Rails: Handling User Model and API Endpoint",
-    platform: "Dev.to",
-    icon: <FaDev />,
-    link: "https://dev.to/samalasumanth0262/grape-gem-in-ruby-on-rails-handling-user-model-and-api-endpoint-g6d",
-    description: "A comprehensive guide to using the Grape gem for API development in Ruby on Rails. Build robust RESTful APIs with ease.",
-    date: "2023",
-    readTime: "10 min read",
-    image: "https://images.unsplash.com/photo-1516116216624-53e697fedbea?w=800"
-  },
+    title: "Derrel Winter on Substack",
+    platform: "Substack",
+    icon: <FaPenNib />,
+    link: "https://substack.com/@derrelwinter",
+    description: "Explore my latest essays, thoughts on AI, and future tech trends directly on Substack. Join the conversation.",
+    date: "Weekly",
+    readTime: "Newsletter",
+    image: "https://images.unsplash.com/photo-1519389950473-47ba0277781c?w=800"
+  }
 ];
 
 const Blogs: React.FC = () => {

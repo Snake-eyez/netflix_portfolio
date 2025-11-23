@@ -57,6 +57,62 @@ const books = [
     description: "A classic Telugu romantic novel that touches the heart.",
     rating: 5,
     genre: "Romance"
+  },
+  {
+    title: "The 48 Laws of Power",
+    author: "Robert Greene",
+    imgSrc: "https://images.unsplash.com/photo-1589829085413-56de8ae18c73?w=800",
+    description: "A controversial yet compelling guide to power dynamics.",
+    rating: 5,
+    genre: "Philosophy"
+  },
+  {
+    title: "The Quran",
+    author: "",
+    imgSrc: "https://images.unsplash.com/photo-1585036156171-384164a8c675?w=800",
+    description: "The central religious text of Islam, a source of guidance.",
+    rating: 5,
+    genre: "Spirituality"
+  },
+  {
+    title: "My Big Toe",
+    author: "Thomas Campbell",
+    imgSrc: "https://images.unsplash.com/photo-1532012197267-da84d127e765?w=800",
+    description: "A trilogy unifying philosophy, physics, and metaphysics.",
+    rating: 5,
+    genre: "Metaphysics"
+  },
+  {
+    title: "$100M Offers",
+    author: "Alex Hormozi",
+    imgSrc: "https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?w=800",
+    description: "How to make offers so good people feel stupid saying no.",
+    rating: 5,
+    genre: "Business"
+  },
+  {
+    title: "Psycho-Cybernetics",
+    author: "Maxwell Maltz",
+    imgSrc: "https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c?w=800",
+    description: "A classic on self-image psychology for personal success.",
+    rating: 5,
+    genre: "Psychology"
+  },
+  {
+    title: "God-Man: The Word Made Flesh",
+    author: "George W. Carey",
+    imgSrc: "https://images.unsplash.com/photo-1507842217121-9d71d5d683c5?w=800",
+    description: "Esoteric interpretations of physiology and spirituality.",
+    rating: 4,
+    genre: "Esoteric"
+  },
+  {
+    title: "The 50th Law",
+    author: "50 Cent & Robert Greene",
+    imgSrc: "https://images.unsplash.com/photo-1544947950-fa07a98d237f?w=800",
+    description: "A guide to fearlessness and strategy.",
+    rating: 5,
+    genre: "Strategy"
   }
 ];
 
@@ -84,15 +140,19 @@ const Reading: React.FC = () => {
             style={{ '--delay': `${index * 0.1}s` } as React.CSSProperties}
           >
             <div className="book-cover-container">
-              <img src={book.imgSrc} alt={book.title} className="book-cover-image" />
+              <div className="unified-book-cover">
+                <div className="unified-cover-content">
+                  <span className="unified-cover-title">{book.title}</span>
+                  <span className="unified-cover-author">{book.author}</span>
+                </div>
+                <div className="unified-cover-decoration"></div>
+              </div>
               <div className="book-genre-badge">{book.genre}</div>
             </div>
             <div className="book-page-info">
-              <h3 className="book-page-title">{book.title}</h3>
-              <h4 className="book-page-author">by {book.author}</h4>
               <div className="book-rating">
                 {[...Array(5)].map((_, i) => (
-                  <span key={i} className={i < book.rating ? 'star filled' : 'star'}>
+                  <span key={i} className={i < (book.rating || 0) ? 'star filled' : 'star'}>
                     ★
                   </span>
                 ))}

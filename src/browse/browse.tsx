@@ -29,7 +29,7 @@ const Browse: React.FC = () => {
     {
       name: "Visionary",
       image: yellowImage,
-      backgroundGif: "https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExbmxib24ycWo2cjlmazh0NGV5NTZ2Mzd2YWY0M2tvam9oYXBwYW1ocCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/ERKMnDK6tkzJe8YVa3/giphy-downsized-large.gif" // Dark ocean waves at night
+      backgroundGif: "https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExYmlwbXIxM2tzYWlrbWxhYW14Z3B0ZXExbXJ2cHAybXIxa3Franp2ZCZlcD12MV9naWZzX3NlYXJjaCZjdD1n/HoUqhOYf5lupo1HTMK/giphy.gif" // Updated background
     },
   ];
 

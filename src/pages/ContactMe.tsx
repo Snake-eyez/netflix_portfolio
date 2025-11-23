@@ -158,14 +158,14 @@ const ContactMe: React.FC = () => {
         <div className="contact-right">
           <div className="photo-container">
             <img
-              src="/derrel-photo.jpg"
+              src="/contact-photo.jpg"
               alt="Derrel Winter"
               className="contact-photo"
             />
             <div className="photo-overlay">
               <div className="overlay-text">
                 <h2>Derrel Winter</h2>
-                <p>AI Architect & Full-Stack Developer</p>
+                <p>AI Architect & Thought Leader</p>
               </div>
             </div>
           </div>

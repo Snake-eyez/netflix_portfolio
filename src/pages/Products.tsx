@@ -18,7 +18,7 @@ const Products: React.FC = () => {
             ],
             price: "Premium",
             link: "https://derrelwinter.gumroad.com/l/thecounsil",
-            image: "https://images.unsplash.com/photo-1614726365723-49cfae96c694?w=800",
+            image: "/consciousness_council.jpg",
             tag: "AI Prompt"
         },
         {

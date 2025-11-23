@@ -1,83 +1,56 @@
-# Firebase Hosting Deployment Guide
+# 🎯 IMPORTANT: Correct URLs for Your Portfolio
 
-## ✅ Your app is now live at:
-https://netflixderrel--derrel-win.europe-west4.hosted.app/
+## ✅ Working URLs (Firebase Hosting - Static Site)
+Your portfolio is successfully deployed at:
 
-## 🚀 Quick Deployment Commands
+- **Primary URL:** https://derrelnetflix.web.app
+- **Alternative URL:** https://derrelnetflix.firebaseapp.com
 
-### Option 1: Using npm script (Recommended)
+## ❌ Wrong URL (Firebase App Hosting - Backend Service)
+This URL will NOT work for your static React app:
+- https://netflixderrel--derrel-win.europe-west4.hosted.app/
+
+**Why?** This is a Firebase App Hosting URL, which expects a Node.js backend server. Your React app is a static site and should use Firebase Hosting instead.
+
+## 🔧 What's the Difference?
+
+### Firebase Hosting (What you're using ✅)
+- For static websites (HTML, CSS, JS)
+- Perfect for React, Vue, Angular apps
+- Fast CDN delivery
+- URLs: `*.web.app` or `*.firebaseapp.com`
+
+### Firebase App Hosting (What you DON'T need ❌)
+- For full-stack applications with backend
+- Requires a Node.js server
+- URLs: `*.hosted.app`
+
+## 🚀 Deployment Commands
+
+Deploy your site:
 ```bash
 npm run deploy
 ```
 
-### Option 2: Using PowerShell script
-```powershell
-.\deploy.ps1
-```
-
-### Option 3: Manual deployment
+Or manually:
 ```bash
-# Build the app
 npm run build
-
-# Deploy to Firebase
 firebase deploy --only hosting
 ```
 
-## 📁 Important Files
+## 📝 Next Steps
 
-- **firebase.json** - Firebase Hosting configuration
-- **.firebaserc** - Firebase project settings
-- **deploy.ps1** - Automated deployment script
+1. Visit https://derrelnetflix.web.app to see your live site
+2. If you want a custom domain, set it up in Firebase Console
+3. Delete the Firebase App Hosting backend if you don't need it
 
-## 🔧 Configuration Details
+## 🐛 If Site Doesn't Load
 
-### Firebase Project
-- Project ID: `netflixderrel`
-- Hosting URL: https://netflixderrel--derrel-win.europe-west4.hosted.app/
+1. Wait 1-2 minutes for CDN propagation
+2. Clear browser cache (Ctrl + Shift + R)
+3. Check deployment: `firebase hosting:channel:list`
+4. Verify build folder exists: check `build/` directory
 
-### Build Settings
-- Build folder: `build/`
-- React Router: Configured (all routes redirect to index.html)
-- Caching: Enabled for static assets
-
-## 📝 Common Tasks
-
-### Update your site
-1. Make your changes
-2. Run `npm run deploy`
-3. Wait for deployment to complete
-4. Visit your URL to see changes
-
-### View deployment history
-```bash
-firebase hosting:channel:list
-```
-
-### Rollback to previous version
-```bash
-firebase hosting:clone SOURCE_SITE_ID:SOURCE_CHANNEL_ID TARGET_SITE_ID:live
-```
-
-## 🐛 Troubleshooting
-
-### Build fails
-- Check for TypeScript errors
-- Run `npm install` to ensure dependencies are installed
-- Check console for specific error messages
-
-### Deployment fails
-- Ensure you're logged in: `firebase login`
-- Check project ID in `.firebaserc`
-- Verify you have permissions for the project
-
-### Site shows old version
-- Clear browser cache (Ctrl + Shift + R)
-- Wait 1-2 minutes for CDN to update
-- Check deployment status: `firebase hosting:channel:list`
-
-## 📚 Resources
-
-- [Firebase Hosting Docs](https://firebase.google.com/docs/hosting)
-- [React Router with Firebase](https://firebase.google.com/docs/hosting/full-config#rewrites)
-- [Custom Domain Setup](https://firebase.google.com/docs/hosting/custom-domain)
+---
+Last deployed: 2025-11-23
+Project: derrelnetflix

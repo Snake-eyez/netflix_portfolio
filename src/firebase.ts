@@ -3,7 +3,7 @@ import { getFirestore } from "firebase/firestore";
 
 const firebaseConfig = {
     apiKey: "AIzaSyAzSIG7dC_iHBAMC8W-KfnuZIjsiVqnD3c",
-    authDomain: "derrel-win.firebaseapp.com",
+    authDomain: "derrelwinter.com",
     projectId: "derrel-win",
     storageBucket: "derrel-win.firebasestorage.app",
     messagingSenderId: "749969636632",

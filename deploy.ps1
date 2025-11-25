@@ -24,4 +24,4 @@ if ($LASTEXITCODE -ne 0) {
 }
 
 Write-Host "`n✅ Deployment successful!" -ForegroundColor Green
-Write-Host "🌍 Your app is live at: https://netflixderrel--derrel-win.europe-west4.hosted.app/" -ForegroundColor Cyan
+Write-Host "🌍 Your app is live at: https://derrelwinter.com" -ForegroundColor Cyan

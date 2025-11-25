@@ -3,8 +3,8 @@
 ## ✅ Working URLs (Firebase Hosting - Static Site)
 Your portfolio is successfully deployed at:
 
-- **Primary URL:** https://derrelnetflix.web.app
-- **Alternative URL:** https://derrelnetflix.firebaseapp.com
+- **Primary URL:** https://derrelwinter.com
+- **Alternative URL:** https://derrel-win.web.app
 
 ## ❌ Wrong URL (Firebase App Hosting - Backend Service)
 This URL will NOT work for your static React app:
@@ -40,8 +40,8 @@ firebase deploy --only hosting
 
 ## 📝 Next Steps
 
-1. Visit https://derrelnetflix.web.app to see your live site
-2. If you want a custom domain, set it up in Firebase Console
+1. Visit https://derrelwinter.com to see your live site
+2. If you want a custom domain, set it up in Firebase Console (Done!)
 3. Delete the Firebase App Hosting backend if you don't need it
 
 ## 🐛 If Site Doesn't Load
@@ -52,5 +52,5 @@ firebase deploy --only hosting
 4. Verify build folder exists: check `build/` directory
 
 ---
-Last deployed: 2025-11-23
-Project: derrelnetflix
+Last deployed: 2025-11-25
+Project: derrel-win

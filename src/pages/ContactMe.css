@@ -43,12 +43,10 @@
 .contact-left {
   flex: 1;
   padding: 60px 40px 40px;
-  /* Top padding accounts for back button */
   display: flex;
   flex-direction: column;
   justify-content: center;
   overflow-y: auto;
-  /* Allow scroll only if content overflows vertically on very small screens */
 }
 
 .contact-content {
@@ -189,7 +187,6 @@
 .form-group textarea {
   resize: none;
   height: 100px;
-  /* Fixed height to prevent expansion */
 }
 
 .submit-btn {
@@ -244,202 +241,6 @@
   height: 100%;
   object-fit: cover;
   object-position: top center;
-  /* Focus on top of image to show head */
-}
-
-.photo-overlay {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  padding: 40px;
-  background: linear-gradient(to top, rgba(0, 0, 0, 0.9), transparent);
-  color: #fff;
-}
-
-.overlay-text h2 {
-  font-size: 2rem;
-  font-weight: 700;
-  margin-bottom: 5px;
-}
-
-.overlay-text p {
-  font-size: 1rem;
-  color: #d4d4d4;
-}
-
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-  }
-
-  border-radius: 10px;
-  border: 1px solid rgba(255, 255, 255, 0.05);
-}
-
-.info-item {
-  display: flex;
-  align-items: center;
-  gap: 15px;
-}
-
-.info-icon {
-  font-size: 1.2rem;
-  color: #ea580c;
-}
-
-.info-label {
-  font-size: 0.8rem;
-  color: #777;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-}
-
-.info-value {
-  color: #fff;
-  text-decoration: none;
-  font-size: 1rem;
-  font-weight: 500;
-  transition: color 0.3s ease;
-}
-
-.info-value:hover {
-  color: #ea580c;
-}
-
-.coffee-section {
-  margin-bottom: 20px;
-  display: flex;
-  align-items: center;
-  gap: 15px;
-}
-
-.coffee-text {
-  font-size: 0.9rem;
-  color: #d4d4d4;
-}
-
-.coffee-btn {
-  background-color: #ea580c;
-  color: #fff;
-  padding: 8px 16px;
-  border-radius: 20px;
-  font-size: 0.9rem;
-  font-weight: 600;
-  text-decoration: none;
-  transition: all 0.3s ease;
-  display: inline-flex;
-  align-items: center;
-  gap: 6px;
-}
-
-.coffee-btn:hover {
-  background-color: #f97316;
-  transform: translateY(-2px);
-}
-
-/* Form Styling */
-.contact-form {
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
-}
-
-.form-row {
-  display: flex;
-  gap: 15px;
-}
-
-.form-group {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  gap: 6px;
-}
-
-.form-group label {
-  font-size: 0.85rem;
-  color: #d4d4d4;
-  font-weight: 500;
-}
-
-.form-group input,
-.form-group textarea {
-  background-color: rgba(255, 255, 255, 0.05);
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  border-radius: 6px;
-  padding: 10px;
-  color: #fff;
-  font-size: 0.9rem;
-  transition: all 0.3s ease;
-}
-
-.form-group input:focus,
-.form-group textarea:focus {
-  outline: none;
-  border-color: #ea580c;
-  background-color: rgba(255, 255, 255, 0.1);
-}
-
-.form-group textarea {
-  resize: none;
-  height: 100px;
-  /* Fixed height to prevent expansion */
-}
-
-.submit-btn {
-  background: linear-gradient(135deg, #ea580c 0%, #f97316 100%);
-  color: #fff;
-  border: none;
-  padding: 12px;
-  border-radius: 6px;
-  font-size: 1rem;
-  font-weight: 700;
-  cursor: pointer;
-  transition: all 0.3s ease;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 10px;
-}
-
-.submit-btn:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 5px 15px rgba(234, 88, 12, 0.3);
-}
-
-.submit-btn:disabled {
-  opacity: 0.7;
-  cursor: not-allowed;
-  transform: none;
-}
-
-.success-message {
-  color: #4ade80;
-  font-size: 0.9rem;
-  text-align: center;
-  animation: fadeIn 0.5s ease;
-}
-
-/* Right Side - Photo */
-.contact-right {
-  flex: 1;
-  position: relative;
-  overflow: hidden;
-}
-
-.photo-container {
-  width: 100%;
-  height: 100%;
-  position: relative;
-}
-
-.contact-photo {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: top center;
-  /* Focus on top of image to show head */
 }
 
 .photo-overlay {
@@ -487,7 +288,7 @@
   .contact-right {
     display: block;
     flex: none;
-    height: 480px;
+    height: 520px;
     order: -1;
     margin-top: 60px;
   }

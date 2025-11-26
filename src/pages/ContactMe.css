@@ -6,18 +6,6 @@
   background-color: #000;
   color: #fff;
   border: 1px solid rgba(255, 255, 255, 0.2);
-  padding: 8px 16px;
-  border-radius: 6px;
-  font-size: 0.9rem;
-  font-weight: 600;
-  cursor: pointer;
-  transition: all 0.3s ease;
-  z-index: 20;
-}
-
-.btn-back-contact:hover {
-  background-color: rgba(255, 255, 255, 0.2);
-  transform: translateX(-3px);
 }
 
 .contact-split {

@@ -66,7 +66,7 @@ const ContactMe: React.FC = () => {
             </div>
 
             <div className="coffee-section">
-              <p className="coffee-text">Or catch up over a coffee ☕</p>
+              <p className="coffee-text">Catch up over a coffee ☕ or...</p>
               <a
                 href="https://derrelwinter.gumroad.com/coffee"
                 target="_blank"

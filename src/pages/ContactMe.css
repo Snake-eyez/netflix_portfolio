@@ -2,10 +2,35 @@
 
 .contact-container {
   height: 100vh;
-  width: 100vw;
+  width: 100%;
   background-color: #000;
   color: #fff;
   border: 1px solid rgba(255, 255, 255, 0.2);
+  box-sizing: border-box;
+}
+
+.btn-back-contact {
+  position: absolute;
+  top: 80px;
+  left: 40px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background-color: rgba(255, 255, 255, 0.1);
+  color: #fff;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  padding: 12px 24px;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  z-index: 30;
+}
+
+.btn-back-contact:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+  transform: translateX(-3px);
 }
 
 .contact-split {
@@ -265,6 +290,13 @@
   }
 
   .contact-left {
-    padding: 80px 20px 40px;
+    padding: 130px 20px 40px;
+  }
+
+  .btn-back-contact {
+    top: 70px;
+    left: 20px;
+    padding: 10px 20px;
+    font-size: 0.9rem;
   }
 }

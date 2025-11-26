@@ -11,7 +11,7 @@ const season1Data = [
     date: "Early Career",
     description: (
       <>
-        My early roles as a system engineer for organizations like the <strong>Municipality of Rotterdam, Sandvik, Nutricia and Atlas Copco</strong> built the foundation of who I am professionally. I led migrations, managed Active Directory environments, secured networks and guided teams through transitions where failure wasn't allowed. Those years shaped my instinct for <strong>reliability and structure</strong>.
+        My early roles as a system engineer for organizations like the <strong>AIG EuropeMunicipality of Rotterdam, Sandvik, Nutricia and Atlas Copco</strong> built the foundation of who I am professionally. I led migrations, managed Active Directory environments, secured networks and guided teams through transitions where failure wasn't allowed. Those years shaped my instinct for <strong>reliability and structure</strong>.
         <br /><br />
         As I grew into senior and teamlead roles at <strong>Pink & Nelson</strong> and later <strong>Inlumi</strong>, my work shifted from incident response to <strong>system design</strong>. I led engineering teams, introduced automation into traditional environments and modernized infrastructure so organizations could operate with more stability and control. I began thinking <strong>ahead of problems</strong> instead of reacting to them.
         <br /><br />

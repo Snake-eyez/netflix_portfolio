@@ -12,7 +12,7 @@
 
 .btn-back-coming-soon {
     position: absolute;
-    top: 40px;
+    top: 80px;
     left: 40px;
     display: flex;
     align-items: center;
@@ -265,7 +265,7 @@
 
 @media (max-width: 640px) {
     .btn-back-coming-soon {
-        top: 20px;
+        top: 70px;
         left: 20px;
     }
 

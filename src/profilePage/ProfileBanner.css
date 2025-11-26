@@ -146,8 +146,7 @@
 
   .banner-description {
     font-size: 1rem;
-    display: none;
-    /* Hide description on mobile often */
+    display: block;
   }
 
   .banner-buttons {

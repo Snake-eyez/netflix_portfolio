@@ -11,13 +11,13 @@ interface ProfileBannerProps {
 const bannerConfig = {
   Professional: {
     headline: "Professional",
-    description: "For clients, business partners, investors — serious, results-oriented.",
+    description: "For clients, business partners, investors and serious results-oriented companies.",
     primaryCta: "Book Strategy",
     secondaryCta: "LinkedIn"
   },
   Creative: {
     headline: "Creative",
-    description: "For collaborators, creators, spiritual seekers, metaphysical thinkers.",
+    description: "For collaborators, creative creators, spiritual seekers, metaphysical thinkers.",
     primaryCta: "Follow Substack",
     secondaryCta: "Instagram"
   },

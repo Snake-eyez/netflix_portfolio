@@ -50,7 +50,7 @@ const ContactMe: React.FC = () => {
             <p className="contact-subtitle">
               I'm always open to discussing new projects, creative ideas, or opportunities
               to be part of your vision. Whether you need AI solutions, full-stack development,
-              or strategic consulting—let's connect.
+              or strategic consulting. let's connect!
             </p>
 
             <div className="contact-info-block">

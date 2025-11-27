@@ -70,6 +70,41 @@ const Portfolio: React.FC = () => {
             title: 'Floral Fashion',
             category: 'Fashion Photography',
             description: 'Elegance blooming in nature\'s embrace'
+        },
+        {
+            id: 10,
+            image: '/portfolio-10.jpg',
+            title: 'Geometric Elegance',
+            category: 'Product Photography',
+            description: 'Sacred geometry meets modern design'
+        },
+        {
+            id: 11,
+            image: '/portfolio-11.jpg',
+            title: 'Crimson Energy',
+            category: 'Artistic Portrait',
+            description: 'Bold expression through vibrant color and texture'
+        },
+        {
+            id: 12,
+            image: '/portfolio-12.jpg',
+            title: 'Golden Touch',
+            category: 'Conceptual Art',
+            description: 'The Midas touch in everyday moments'
+        },
+        {
+            id: 13,
+            image: '/portfolio-13.jpg',
+            title: 'Chromatic Flow',
+            category: 'Portrait Art',
+            description: 'Liquid light painting human emotion'
+        },
+        {
+            id: 14,
+            image: '/portfolio-14.png',
+            title: 'Miniature Sanctuary',
+            category: 'Still Life',
+            description: 'A peaceful world captured under glass'
         }
     ];
 

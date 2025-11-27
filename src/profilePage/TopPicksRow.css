@@ -121,13 +121,15 @@
 /* Mobile Adjustments */
 @media (max-width: 768px) {
   .top-picks-row {
-    margin-top: 0;
+    margin-top: 20px;
     padding: 20px;
+    margin-bottom: 40px;
   }
 
   .row-title {
-    font-size: 1.2rem;
+    font-size: 1.5rem;
     line-height: 1.4;
+    margin-bottom: 20px;
   }
 
   .card-row {
@@ -137,8 +139,13 @@
 
   .pick-card {
     width: 100%;
-    aspect-ratio: auto;
-    height: 140px;
+    min-height: 160px;
+    height: auto;
+    aspect-ratio: 16 / 9;
+  }
+
+  .card-content {
+    padding: 20px;
   }
 
   .pick-card:hover {
@@ -146,14 +153,19 @@
   }
 
   .pick-label {
-    font-size: 0.7rem;
+    font-size: 0.65rem;
   }
 
   .pick-title {
-    font-size: 1.1rem;
+    font-size: 1.2rem;
   }
 
-  /* On mobile, maybe show the play button always or different interaction? 
-     For now, keeping hover logic which works on tap for some devices 
-  */
+  .play-circle {
+    width: 60px;
+    height: 60px;
+  }
+
+  .play-icon {
+    font-size: 24px;
+  }
 }

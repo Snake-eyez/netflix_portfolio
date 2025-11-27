@@ -3,8 +3,8 @@
   padding: 0 4%;
   position: relative;
   z-index: 5;
-  margin-top: -150px;
-  /* Overlap with banner like Netflix */
+  margin-top: -100px;
+  /* Overlap with banner */
 }
 
 .row-title {
@@ -26,79 +26,96 @@
   position: relative;
   flex: 1;
   aspect-ratio: 16 / 9;
-  /* Netflix standard aspect ratio */
   border-radius: 4px;
-  /* Small border radius */
   overflow: hidden;
   cursor: pointer;
   transition: transform 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94), box-shadow 0.3s ease;
   border: none;
-  /* Netflix cards don't usually have borders */
-  display: flex;
-  align-items: center;
-  justify-content: center;
 }
 
 .pick-card:hover {
-  transform: scale(1.1);
-  /* Reduced scale from 1.4 */
+  transform: scale(1.05);
   z-index: 99;
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.7);
-  transition-delay: 0.1s;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
 }
 
 .card-content {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 10px;
-  text-align: center;
-  padding: 10px;
+  position: absolute;
+  top: 0;
+  left: 0;
   width: 100%;
   height: 100%;
-  /* Add a subtle overlay to enhance text readability on gradients */
-  background: radial-gradient(circle, rgba(0, 0, 0, 0.1) 0%, rgba(0, 0, 0, 0.3) 100%);
-}
-
-.pick-icon {
-  font-size: 2vw;
-  color: rgba(255, 255, 255, 0.95);
-  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.5));
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-sizing: border-box;
+  z-index: 2;
 }
 
 .pick-label {
-  color: #fff;
-  font-size: 1vw;
-  font-weight: 700;
-  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.6);
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.7);
   text-transform: uppercase;
-  letter-spacing: 0.5px;
+  letter-spacing: 1px;
+  align-self: flex-start;
+  margin-top: 4px;
 }
 
-/* Animations */
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-    transform: translateY(-20px);
-  }
-
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+.pick-title {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #fff;
+  margin: 0;
+  line-height: 1.2;
+  text-align: left;
+  align-self: flex-start;
+  margin-bottom: 4px;
 }
 
-@keyframes slideIn {
-  from {
-    opacity: 0;
-    transform: translateY(20px);
-  }
+/* Play Button Overlay */
+.play-button-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.2);
+  /* Slight darken on hover */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  z-index: 3;
+}
 
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+.pick-card:hover .play-button-overlay {
+  opacity: 1;
+}
+
+.play-circle {
+  width: 50px;
+  height: 50px;
+  background-color: rgba(255, 255, 255, 0.9);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+.pick-card:hover .play-circle {
+  transform: scale(1.1);
+}
+
+.play-icon {
+  font-size: 20px;
+  color: #000;
+  margin-left: 4px;
+  /* Optical centering for play icon */
 }
 
 /* Mobile Adjustments */
@@ -110,27 +127,33 @@
 
   .row-title {
     font-size: 1.2rem;
+    line-height: 1.4;
   }
 
   .card-row {
     flex-direction: column;
+    gap: 16px;
   }
 
   .pick-card {
     width: 100%;
     aspect-ratio: auto;
-    height: 120px;
+    height: 140px;
   }
 
   .pick-card:hover {
     transform: scale(1.02);
   }
 
-  .pick-icon {
-    font-size: 2rem;
+  .pick-label {
+    font-size: 0.7rem;
   }
 
-  .pick-label {
-    font-size: 1rem;
+  .pick-title {
+    font-size: 1.1rem;
   }
+
+  /* On mobile, maybe show the play button always or different interaction? 
+     For now, keeping hover logic which works on tap for some devices 
+  */
 }

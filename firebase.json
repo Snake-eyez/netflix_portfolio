@@ -14,6 +14,15 @@
         ],
         "headers": [
             {
+                "source": "**",
+                "headers": [
+                    {
+                        "key": "X-Robots-Tag",
+                        "value": "noindex, nofollow, noai, noimageai"
+                    }
+                ]
+            },
+            {
                 "source": "**/*.@(jpg|jpeg|gif|png|svg|webp|ico)",
                 "headers": [
                     {

@@ -111,6 +111,7 @@ const books: Book[] = [
   { title: '48 Laws of Black Empowerment', author: 'Dante Fortson', genre: 'Empowerment', rating: 5, yearRead: 2023, pages: 320 },
   { title: 'World\'s Great Men of Color', author: 'J.A. Rogers', genre: 'Biography', rating: 5, yearRead: 2023, pages: 704 },
   { title: 'The African Origin of Civilization', author: 'Cheikh Anta Diop', genre: 'History', rating: 5, yearRead: 2023, pages: 320 },
+  { title: 'Monas Hieroglyphica', author: 'John Dee', genre: 'Spirituality', rating: 5, yearRead: 2025, pages: 112 },
 ];
 
 const genres = ['All', 'Self-Improvement', 'Business', 'Spirituality', 'Psychology', 'History', 'Biography', 'Finance', 'Technology', 'Philosophy', 'Programming', 'Leadership', 'Strategy', 'Productivity', 'Science', 'Literature', 'Mythology'];

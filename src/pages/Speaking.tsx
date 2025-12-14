@@ -1,59 +1,86 @@
 import React from 'react';
-import { FaArrowLeft, FaMicrophone, FaBell, FaUsers, FaCalendarAlt, FaGlobe } from 'react-icons/fa';
+import { FaArrowLeft, FaFilePowerpoint, FaFilePdf, FaDownload } from 'react-icons/fa';
 import { useNavigate } from 'react-router-dom';
-import './ComingSoon.css';
+import './Speaking.css';
+
+interface Presentation {
+    id: string;
+    title: string;
+    type: 'PPTX' | 'PDF';
+    description: string;
+    filename: string;
+    date: string;
+}
+
+const presentations: Presentation[] = [
+    {
+        id: '1',
+        title: 'Prototype Presentation',
+        type: 'PPTX',
+        description: 'A comprehensive detailed presentation showcasing the initial prototype development, core features, and design decisions.',
+        filename: 'Presentatie van prototype.pptx',
+        date: '2025'
+    },
+    {
+        id: '2',
+        title: 'AI Workflow & Multi-Agent Systems',
+        type: 'PPTX',
+        description: 'Exploring the architecture and implementation of autonomous multi-agent systems for optimized workflow automation.',
+        filename: 'ai_work_flowgrammers_multi_agent_20251106150313.pptx',
+        date: 'Nov 2025'
+    },
+    {
+        id: '3',
+        title: 'AI Workshop: Hands-On',
+        type: 'PDF',
+        description: 'Practical workbook and materials for the interactive AI workshop, covering implementation guides and exercises.',
+        filename: 'ai_workshop_hands_on.pdf',
+        date: '2025'
+    }
+];
 
 const Speaking: React.FC = () => {
     const navigate = useNavigate();
 
     return (
-        <div className="coming-soon-container">
-            <button onClick={() => navigate(-1)} className="btn-back-coming-soon">
+        <div className="speaking-container">
+            <button onClick={() => navigate(-1)} className="btn-back-speaking">
                 <FaArrowLeft /> Back
             </button>
 
-            <div className="coming-soon-content">
-                <div className="rocket-icon">
-                    <FaMicrophone />
-                </div>
-                <h1 className="coming-soon-title">Speaking Events</h1>
-                <h2 className="coming-soon-subtitle">Coming Soon</h2>
-                <p className="coming-soon-description">
-                    Upcoming talks, keynotes, and workshops on AI, technology, and future trends.
+            <div className="speaking-header">
+                <h1 className="speaking-title">Speaking & Presentations</h1>
+                <p className="speaking-description">
+                    Access resources, slide decks, and materials from recent talks, workshops, and technical deep dives.
                 </p>
-                <div className="features-preview">
-                    <div className="feature-item">
-                        <div className="feature-icon"><FaUsers /></div>
-                        <h3>Keynotes</h3>
-                        <p>Inspiring talks for large audiences</p>
-                    </div>
-                    <div className="feature-item">
-                        <div className="feature-icon"><FaCalendarAlt /></div>
-                        <h3>Schedule</h3>
-                        <p>Upcoming event dates and locations</p>
-                    </div>
-                    <div className="feature-item">
-                        <div className="feature-icon"><FaGlobe /></div>
-                        <h3>Global Reach</h3>
-                        <p>Virtual and in-person engagements</p>
-                    </div>
-                </div>
-                <div className="notify-section">
-                    <p className="notify-text">Get notified about new events</p>
-                    <button className="notify-btn">
-                        <FaBell /> Notify Me
-                    </button>
-                </div>
-                <div className="timeline">
-                    <p className="timeline-text">Launching: Q3 2025</p>
-                </div>
             </div>
 
-            {/* Animated Background */}
+            <div className="presentations-grid">
+                {presentations.map((item) => (
+                    <div key={item.id} className="presentation-card">
+                        <div className="card-icon">
+                            {item.type === 'PPTX' ? <FaFilePowerpoint /> : <FaFilePdf />}
+                        </div>
+                        <div className="card-content">
+                            <span className="card-type">{item.type} • {item.date}</span>
+                            <h3 className="card-title">{item.title}</h3>
+                            <p className="card-text">{item.description}</p>
+                        </div>
+                        <a
+                            href={`/presentation/${item.filename}`}
+                            download
+                            className="download-btn"
+                        >
+                            <FaDownload /> Download {item.type}
+                        </a>
+                    </div>
+                ))}
+            </div>
+
+            {/* Background Animation Elements */}
             <div className="background-animation">
                 <div className="circle circle-1"></div>
                 <div className="circle circle-2"></div>
-                <div className="circle circle-3"></div>
             </div>
         </div>
     );

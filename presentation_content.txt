@@ -1,0 +1,675 @@
+
+
+==================================================
+FILE: Presentatie van prototype.pptx
+==================================================
+--- Slide 1 ---
+AI-Integratie Workshop voor KPN-managers
+Door: Derrel Winter
+--- Slide 2 ---
+Wat te verwachten?
+Intro
+Opdracht 1: Duurzaamheidsmedewerker AI
+Opdracht 2: Creatie van een Marketing Advertentie met AI Louis
+Opdracht 3: Maak je Eigen GPT Clone
+Opdracht 4: AI Implementatie Plan met Joost AI
+Reflectie en Discussie
+Conclusie
+--- Slide 3 ---
+Doelstellingen
+Het verbeteren van het begrip van AI-toepassingen binnen verschillende bedrijfsfuncties en het ontwikkelen van praktische vaardigheden in AI-gebruik.
+--- Slide 4 ---
+Opdracht 1 -  Aan de Slag met de Duurzaamheidsmedewerker AI
+Doel: Gebruik van AI om duurzaamheid data te analyseren en verbeterpunten te identificeren.
+Taken: Data-analyse, patroonherkenning, en presentatie van bevindingen.
+Beoordeling: Via een AI-gestuurde beoordelingssysteem dat feedback geeft op de kwaliteit van analyse en presentatie.
+
+--- Slide 5 ---
+Wat te doen als Duurzaamheidsmanager
+Correlatieanalyse:
+Berekenen van correlatiecoëfficiënten tussen het energieverbruik, dataverkeer en netwerkstoringen om sterke verbanden te identificeren.
+Trendanalyse:
+Voer een trendanalyse uit op maandelijkse gegevens om te zien hoe deze variabelen zich over tijd ontwikkelen en beïnvloeden.
+Causale Hypotheses
+Formuleer hypotheses over mogelijke oorzaken van de waargenomen trends en hoe deze de klanttevredenheid beïnvloeden.
+Aanbevelingen:
+Op basis van de analyse, stel specifieke acties voor die genomen kunnen worden om de efficiëntie te verbeteren en de klanttevredenheid te verhogen
+
+
+
+
+01
+02
+03
+04
+
+--- Slide 6 ---
+Ga met jouw AI Duurzaamheid Medewerker aan de slag
+https://shorturl.at/qMTVZ
+
+--- Slide 7 ---
+“NABESPREKING”
+--- Slide 8 ---
+De CMO van KPN Greennet Louis
+Louis is de kritische marketeer en CMO van KPN Greennet. 
+Hij beoordeelt jouw marketing prompt om te zien of deze geschikt is voor advertenties. 
+Na zijn analyse geeft hij je direct een cijfer en waardevolle feedback om je prompt te verbeteren
+--- Slide 9 ---
+Componenten van een Goede Prompt
+Taak: Begin met een actiewerkwoord en vermeld duidelijk het doel.
+Context: Geef relevante achtergrondinformatie.
+Voorbeelden: Voorbeelden verbetert de precisie.
+Persoonlijkheid, Formaat, en Toon: Deze elementen begeleiden de AI in hoe de output moet klinken.
+
+--- Slide 10 ---
+KPN GreenNet - Groene WiFi die de Toekomst Verbindt
+
+
+Taak: Promoot KPN GreenNet als de milieuvriendelijke keuze voor internetgebruikers.
+"Ontdek GreenNet, de groene revolutie in internetverbinding van KPN!"
+
+
+--- Slide 11 ---
+KPN GreenNet - Prompt Voorbeelden
+
+Context: Benadruk dat KPN GreenNet gebruikmaakt van duurzame technologieën en praktijken.
+"Bij KPN zetten we ons in voor duurzaamheid door groene WiFi aan te bieden die zowel krachtig als milieubewust is."
+
+
+--- Slide 12 ---
+KPN GreenNet - Prompt Voorbeelden
+
+Voorbeelden: Illustratie van hoe GreenNet bijdraagt aan een lagere CO2-uitstoot.
+"Elke verbinding met GreenNet draagt bij aan minder energieverbruik en een kleinere ecologische voetafdruk."
+
+
+--- Slide 13 ---
+KPN GreenNet - Prompt Voorbeelden
+
+Persoonlijkheid: Toon KPN als een innovatief en verantwoordelijk bedrijf dat de toekomst van de planeet serieus neemt.
+"Wij bij KPN geloven dat technologie niet alleen ons leven moet verrijken, maar ook de wereld moet verbeteren."
+
+
+--- Slide 14 ---
+KPN GreenNet - Prompt Voorbeelden
+
+Formaat: Gebruik van aantrekkelijke visuals van de aarde, groene technologie, en gelukkige gezinnen die gebruik maken van het internet.
+"Zie in onze advertentie hoe elke online actie met GreenNet de aarde een beetje groener maakt."
+
+
+--- Slide 15 ---
+KPN GreenNet - Prompt Voorbeelden
+
+Toon: Inspirerend en motiverend, met een focus op positieve verandering.
+"Sluit je aan bij de groene beweging met KPN GreenNet en maak van elke klik een stap naar een duurzamere wereld."
+
+
+--- Slide 16 ---
+Opdracht 2- Maak een advertentie gericht op het promoten van KPN Greennet
+Link naar de banner’s:  https://shorturl.at/cFR37
+Kies een banner, creëer een advertentietekst met Louis' hulp, ontvang feedback
+Maak gebruik van de zes prompt componenten dat zijn:
+Taak, context, voorbeelden, persoonlijkheid, formaat en toon.
+Let op: “Geef mij feedback”
+Link naar Louis: https://shorturl.at/fvLT1
+
+--- Slide 17 ---
+“NABESPREKING”
+--- Slide 18 ---
+Opdracht 3 - MAAK JE EIGEN GPT CLONE
+Specifieke Taken en VerantwoordelijkhedenGegevens en TrainingVerwachte Uitvoer en Interactie
+Doel van de Clone: "Deze GPT-clone is bedoeld om te functioneren als een virtuele assistent die je kan helpen bij het managen van dagelijkse taken en verantwoordelijkheden. De clone moet in staat zijn om communicatie te verzorgen, projectupdates te beheren, en teamleden advies te geven."
+
+--- Slide 20 ---
+MAAK JE EIGEN GPT CLONE
+Afsluiting: Deze GPT-clone wordt een essentieel onderdeel van mijn dagelijkse managementpraktijk.
+Doel van de Clone: "Deze GPT-clone is bedoeld om te functioneren als een virtuele assistent die mij kan helpen bij het managen van dagelijkse taken en verantwoordelijkheden. De clone moet in staat zijn om communicatie te verzorgen, projectupdates te beheren, en teamleden advies te geven."
+
+--- Slide 21 ---
+“NABESPREKING”
+--- Slide 22 ---
+Bellen naar AI Joost
+We gaan bellen naar Ai joost om de laatste opdracht informatie te krijgen
+--- Slide 23 ---
+Bellen naar AI Joost
+Om de volgende instructies te ontvangen, 
+bellen we naar een speciaal AI-systeem, vertegenwoordigd door "Joost Farwerck" via het 
+telefoonnummer 010-307 2153.Vertel hoe je heet en vraag:What is the challenge?
+
+--- Slide 24 ---
+Opdracht 4 - Maak een AI Implementatieplan
+Werk  samen met jouw AI clone om een strategisch plan te ontwikkelen dat de integratie van AI binnen je team bevordert.
+Dit plan moet praktische stappen en strategieën bevatten over hoe AI kan helpen hun dagelijkse werkzaamheden efficiënter en effectiever te maken.
+
+
+--- Slide 25 ---
+GPT AI Joost
+1. Innovatie: Ik beoordeel of de AI-oplossing echt innovatief is binnen de telecomindustrie.
+2. Toepassing: Ik beoordeel de haalbaarheid van integratie en technische uitvoering.
+3. Aanpassingsplan: Ik beoordeel of het plan realistisch en implementeerbaar is binnen de teams van KPN.
+4. Inzicht: Ik bepaal of het plan blijk geeft van een diepgaand begrip van de impact op gebruikerstevredenheid en bedrijfsvoering.
+
+
+https://shorturl.at/qwVWZ
+--- Slide 26 ---
+Reflectie en Discussie
+
+Wat heb je geleerd?
+Wat vond je verrassend of uitdagend?
+Hoe kan je deze kennis toepassen in je werk?
+--- Slide 27 ---
+“Bedankt voor uw deelname”
+
+==================================================
+FILE: ai_work_flowgrammers_multi_agent_20251106150313.pptx
+==================================================
+--- Slide 1 ---
+
+
+
+De toekomst van AI-werk:
+Flowgrammers & Multi-Agent Systems
+Bouwen zonder code. Orkestreren met logica.
+AI inzetten zonder te programmeren
+--- Slide 2 ---
+
+
+
+Agenda
+Recap Deel 1: van prompt naar werkende flow
+De Flowgrammer
+Multi-Agent Orchestration
+Hands-on: Master agent bouwen en publiceren in Teams
+--- Slide 3 ---
+
+
+
+Agenda (vervolg)
+Hands-on: Extra agents en orkestratie
+Hands-on: Power Automate actie en testen in Teams
+Reflectie en bonus: teaser naar MCP (Deel 3)
+--- Slide 4 ---
+
+
+
+Waar staan we nu? Feiten & weetjes
+WEF: 44% van skills verandert binnen 5 jaar.
+IDC/Microsoft: tegen 2028 >1 miljard agents in omloop.
+2025: tech-bedrijven blijven herstructureren, focus op AI-productiviteit.
+--- Slide 5 ---
+
+
+
+Waarom dit belangrijk is
+AI is een werkwijze, geen losse tool
+Teams van agents leveren betrouwbaarder resultaat
+Flowgrammers versnellen van idee naar productie
+--- Slide 6 ---
+
+
+
+De Flowgrammer
+Denkt in stappen en beslislogica
+Bouwt met Copilot Studio en Power Automate
+Verbindt mens, data, systemen en AI
+--- Slide 7 ---
+
+
+
+Mini-oefening
+Teken een proces dat je vaak doet
+Benoem inputs, checks, outputs
+--- Slide 8 ---
+
+
+
+Multi-Agent Orchestration in 1 minuut
+Eén taak per agent
+Elkaars output als input
+Heldere hand-offs en validaties
+--- Slide 9 ---
+
+
+
+Voorbeeldarchitectuur (Pepperbyte)
+
+HR Agent
+gegevens
+
+IT Agent
+accounts
+
+Fleet Agent
+leaseauto
+Agents communiceren naadloos met elkaar via gestructureerde input/output flows
+
+Master Agent
+routert en samenvat
+--- Slide 10 ---
+
+
+
+Hands-on 1: Master Agent bouwen
+Websiteversie Copilot Studio
+Begroeting, intake, bevestiging, samenvatting
+Publiceren naar Teams
+--- Slide 11 ---
+
+
+
+Hands-on 1: Test in Teams
+Testprompts
+Edge-cases
+Shortcuts en valideren
+--- Slide 12 ---
+
+
+
+Hands-on 2: Extra agents
+Kies 2 templates (HR Intake, Incident Intake, Fleet aanvraag)
+Koppel aan Master Agent
+Test orchestration in Teams
+--- Slide 13 ---
+
+
+
+Hands-on 3: Power Automate
+Actie: e-mail of SharePoint-record
+Koppelen en testen vanuit Teams
+--- Slide 14 ---
+
+
+
+Best practices
+Eén vraag per stap
+Samenvat en laat bevestigen
+Fallback en escape hatch
+--- Slide 15 ---
+
+
+
+Resultaat van vandaag
+Werkende Master Agent in Teams
+Werkende child agents met hand-off
+1 Power Automate-actie live getest
+--- Slide 16 ---
+
+
+
+Bedankt voor het meedoen!
+--- Slide 17 ---
+
+
+
+Reflectie
+Waar toepassen in jouw organisatie
+Welke brondata en policies nodig
+Volgende iteraties
+--- Slide 18 ---
+
+
+
+Bonus: teaser Deel 3 (MCP)
+Wat is MCP
+Waarom het bouwen nog eenvoudiger wordt
+Voorproefje demo
+
+==================================================
+FILE: ai_workshop_hands_on.pdf
+==================================================
+--- Page 1 ---
+VoorIT-professionals Slide1 / 15
+Hands-onAI Workshop
+VanPromptingtotAgents
+EenpraktischeworkshopvoorIT-professionals
+Vankennismakingtot implementatie
+Derrel Winter
+--- Page 2 ---
+Introductie
+Dezesessieis voorIT-professionalsdieverderwillendande hype,en echtwillen 
+snappenhoeze AI en automatiseringnu directkunneninzettenin hunwerk.
+Watkun je verwachten?
+PromptingMastery
+Leereffectieveprompts 
+schrijvenvooroptimaleAI-
+resultaten
+AI-agentsbouwen
+Ontwikkelje eigenAI-
+agentsmetMicrosoft 
+CopilotStudio
+Integratie& 
+Automatisering
+VerbindAImetworkflows 
+ensystemenvoorechte 
+impact
+Hands-on AI Workshop
+Welkombijdehands-onAI-workshop!
+MadewithGenspark
+Slide2 / 15
+--- Page 3 ---
+Introductie
+Laptop ChatGPT Pepperbyte 
+account
+Hands-on AI Workshop
+Wat heb je nodig?
+--- Page 4 ---
+Blok1- PromptingMastery
+WaaromAI-skillsnúzo belangrijkzijn
+VolgenshetWorldEconomicForumzal39%vanje skillsbinnenvijfjaar 
+verouderenof veranderen,vooraldoorAI enautomatisering.
+"AIvernietigtbanen,maarcreëertervooralveel–alleenin rollenenbedrijvendienunognietbestaan. 
+Dez erevolutiegaatdriekeerzosnelalshetinternetbeginjaren'90!"
+Kernboodschap:
+"AIis geenmagischecodebox,maareenslimmecollega. Hetis een 
+gesprekspartner–watje erinstopt,komteruit.Jíjbepaaltderol,detaak,
+de contextendeoutput."
+
+--- Page 5 ---
+VerschillendeAI-modellenvergeleken
+"Zeschef-koks,éénbasisrecept"
+In dehypermodernekeukenvanAI
+ChefGemini
+Specialiteit:Multimodaliteit- verwerkttekst, 
+afbeeldingenen videoals eenmeesterkok
+ChefClaude
+Specialiteit:geweldig met code en menselijke 
+output- De grondleggers van MCP
+ChefChatGPT
+Specialiteit:Veelzijdigheid- regelmatigbijgeschooldin 
+allerhandeonderwerpen
+ChefGrok
+Specialiteit:MetX-datasferenals ingrediëntenvoorup-
+to-dateresultaten
+ChefDeepSeek
+Specialiteit:Codekunst- blinktuit in hetgenererenvan 
+programmeercode
+ChefMetaAI
+Specialiteit:Opensourceen schaalbaarheidvoor 
+iedereentoegankelijk
+Hetgedeeldebasisrecept:LargeLanguageModel
+ElkvandezeAI-chefswerktmetdezelfdebasis-ingrediënten,maarvoegtzijneigengeheimekruidentoe.
+Vraagje wátje wil- eenjuridischadvies,eengedichtof Pythoncode- en elkechefserveertietsnétanders.Maarde kwaliteitvaltof staatmet 
+hoeduidelijkjij je bestellingplaatst: rol,doel,context,vormen grenzen.
+--- Page 6 ---
+Blok1- PromptingMastery
+WaaromAI-skillsnúzo belangrijkzijn
+VolgenshetWorldEconomicForumzal39%vanje skillsbinnenvijfjaar 
+verouderenof veranderen,vooraldoorAI enautomatisering.
+"AIvernietigtbanen,maarcreëertervooralveel–alleenin rollenenbedrijvendienunognietbestaan. 
+Dez erevolutiegaatdriekeerzosnelalshetinternetbeginjaren'90!"
+Tip:Elkelaagmaakthetantwoordscherperenmeergerichtopjouwspecifiekebehoefte!
+"Jebenteenervaren 
+netwerkbeheerder..."
+Devijfbouwstenenvaneengoedeprompt:
+1.Rol/Perspectief 2.Doel/Taak
+"Analyseerdezefirewalllogs 
+en schrijfeenrapport..."
+"Geefhetantwoordals een 
+tabel..."
+"Gebruikalleendezedata,max 
+100woorden..."
+3.Context
+"Hierzijnde logsvan
+server X..."
+5.Instructies4.Outputvorm
+6. Een escape hatch
+"Weet je het antwoord niet zeker? 
+Vraag dan om meer informatie in 
+plaats van te gokken.”
+--- Page 7 ---
+Vantheorienaarpraktijk
+Ik laatje nuzienhoeeensimpelepromptheelverschillenderesultatenkangevenafhankelijkvandebouwstenendiewetoevoegen.Letophoedeoutputsteedsconcreter 
+enbruikbaarderwordt!
+Evolutievaneen prompt:
+Basisprompt:
+"Helpmemeteennetwerkprobleem."
+Output:
+Algemene,generiekeinformatieovermogelijkenetwerkproblemenen standaardtroubleshooting 
+stappendienietspecifiekzijnvoorjouwsituatie.
+Verbeterdeprompt:
+Rol:"Je benteenseniornetwerkbeheerder."
+Taak:"Helpme eenconnectiviteitsprobleemtussenonzeserversop 
+te lossen."
+Context:"ServerA kannietverbindenmetdatabaseserverB sindsde 
+firewallupdatevangisteren."
+Output:
+Meergerichtetroubleshootingspecifiekvoorfirewall-gerelateerdeconnectiviteitsproblementussen 
+servers,maarnogsteedsvrijalgemeen.
+Optimaleprompt:
+Rol:"Je benteenseniorCiscofirewallspecialist."
+Taak:"Analyseerdezefirewalllogsen geefeendiagnosevanhet 
+probleem."
+Context:"Nade updatevanASAfirewall10.5.1naar10.5.2krijgen
+wepacketdroperrorsvoorSQLverkeertussenserver192.168.1.10en 
+database192.168.2.5op poort1433."
+Outputvorm:"Geefje antwoordals eengestructureerdechecklist." 
+Instructies:"Focusalleenop CiscoASAfirewallissues.Vraagmeer 
+Output:
+DiagnoseChecklist:SQLConnectiviteitsprobleem
+1.✓ControleerACL-configuratievoorpoort1433
+2.✓VerifieerNAT-regelsvoorde databaseserver
+3.✓BekijkpacketinspectionsettingsvoorSQL
+4.✓Controleerstatefulinspectiontimeoutvalues
+5.✓Bekendebugin ASA10.5.2voorSQLtraffic
+Mogelijkeoplossing:Downgradenaar10.5.1of pasdeadvancedS Q Linspectionparametersaanin de 
+firewallconfiguratie.
+--- Page 8 ---
+Nuis hetjouwbeurt!
+Gebruikhetwerkbladenpastoewatje zojuisthebtgeleerdovereffectiefprompting.
+Instructies:
+1 Kieseenduidelijkerol(bijv.securityexpert,DevOpsengineer)
+2 Formuleereenhelderetaakofopdracht
+3 Voegdummylogdata/IT-casealscontexttoe
+4 Specificeerdegewensteoutputvorm(tabel,lijst,rapport)
+5 Bonus:Bouween'escapehatch'in (AImagterugvragenalsinfoontbreekt)
+15
+minuten
+Tip
+Testje promptmetverschillendevariatiesomte zien 
+welkeelementenhetmeesteimpacthebbenop het 
+resultaat!
+Context/ Data:
+https://shorturl.at/1QOC0
+--- Page 9 ---
+Reflecteren
+Effectief
+Specifiekeexpertiseaangeven(bv."SeniorLinuxEngineer"vs "IT Professional")
+Exactevereistenuitleggen(bv. "ConformISO27001"vs "Veilig")
+Voorbeeldenof logstoevoegenvoortechnischecontext
+Mindereffectief
+Vagevragenzondercontext(bv."Hoefix ik dit?")
+Conflicterendeinstructiesof te veelbeperkingen
+Overdrevenlangecontextzonderfocusop watechtbelangrijkis
+--- Page 10 ---
+In welk stadium staan we nu?
+
+--- Page 11 ---
+Vanpromptnaarpraktischetoepassing
+MicrosoftCopilotStudiois hetplatformomzelfzondercodeslimmeagentste bouwen.Denkaanje eigenvirtuele 
+supportmedewerker,HR-bot,of FAQ-assistent.Alleswatje zojuistleerdeoverprompting,vormtdebasisvandelogicain 
+Copilot.
+Watis CopilotStudio? Hoewerkteenagent?
+No-codeAI agentplatform
+BouwconversationeleAI zonderprogrammeerkennismaarmetallekracht 
+vanenterprise-grademachinelearningtechnologie.
+DemocratiseringvanAI
+30%TraditionalAI Developers 70%No-codeAI Builders
+CopilotStudiodemocratiseertAI dooriedereenin staatte stellenagentste bouwen 
+zondertechnischevoorkennis.
+Kennisbronnentoevoegen
+SharePoint,FAQ's,PDF's,websites
+Topicsbouwen
+Scenario's,vragen& antwoordendefiniëren
+Branding/personalbranding
+Avatar,naam,persoonlijkheidinstellen
+Adaptivecards
+Interactieveformulierenen knoppen
+Livetesten&publiceren
+Directbeschikbaarin Teamsof op hetweb
+--- Page 12 ---
+Vanpromptnaarpraktischetoepassing
+Multi-AgentOrchestration(Nieuw!)
+HR-agent Support-
+agent
+Finance-
+agent
+Security-
+agent
+--- Page 13 ---
+Deopkomstvande'Flowgrammer'
+Denieuwehybrideroltussentechneutenbusiness-procesdenker.Iemanddienietmeeralleshoeftte programmeren,maarslimworkflows,agentsen 
+databronnenorkestreert.
+TechnischeVaardigheden
+Begrijpenvandata-architectuur 
+API-integratieskunnenopzetten 
+Promptingen AI-basisbegrip
+BusinessVaardigheden
+Workflow-optimalisatieen -ontwerp 
+Gebruikersperspectiefbegrijpen 
+Processenvertalennaaroplossingen
+"Detoekomstis hybride.Debesteflowgrammerscombinerentechnischekennismetcreatiefworkflow-denken."
+ModerneIT-architectuur:Geïntegreerdeend-to-endworkflowsmetAI
+Data AI Agent Workflow Services Gebruiker
+De evolutievanIT-werk
+"AI-toolsen no-codeplatformszoalsCopilotStudioen PowerAutomateveranderenhetwerkvanIT-professionalsrazendsnel.Hetdraait niet
+langeralleenomsystemenbeheren,maaromslimmeworkflowsontwerpen–hetverbindenvandata,systemenén AI in éénflow."
+--- Page 14 ---
+Bouwje eigenagentin CopilotStudio
+Nugaje in kleinegroepjeseensimpeleagentbouwenin CopilotStudio.Pasdekennistoedieje zojuisthebtopgedaanover 
+prompting.
+1
+Bedenkeenuse-case
+Kieseenspecifiekscenario 
+waarineenAI-agentvan 
+waardekanzijn
+2
+Bouweentopic
+Maakminimaalééntopic 
+meteengoed 
+gestructureerdeprompt
+3
+Adaptivecard
+Voegeeninteractievekaart 
+toemetformulierenof 
+knoppen
+4
+Koppel(optioneel)
+VerbindmetTeamsof Excel 
+via PowerAutomate
+5
+Test& debug
+Controleerof je agentgoed 
+werkten loseventuele 
+problemenop
+Mogelijkeuse-cases:
+IT SupportAgent
+ HRFAQBot
+ SecurityAdvisor
+ OnboardingAssistant
+ KennisbankNavigator
+ MeetingPlanner
+VoorbeeldTopic:"WachtwoordReset"
+TriggerPhrases:
+Wachtwoordvergeten 
+Passwordreset
+Kannietinloggen
+Hoeveranderik mijnwachtwoord
+AdaptiveCard:
+AgentPrompt:
+Rol:Je benteenbehulpzameIT-supportmedewerker.
+Taak:Helpgebruikersmetwachtwoordresetsdoorhetjuisteprocesuit te leggen.
+Context:Gebruikersmoetenhunidentiteitbevestigenvia eenadaptivecardvoordat 
+ze eenresetlinkontvangen.
+Output:Vriendelijkeinstructiesmetduidelijkestappen.
+Beperkingen:Vraagaltijdomverificatie,geefnooitwachtwoordenof 
+--- Page 15 ---
+AgentDemonstraties
+AgentDemo
+Tweegroepjespresenterenkorthunagent:
+1. "Hoewerktjullieagent?"(2 min)
+2. "Waarliepje tegenaantijdenshetbouwen?"(2 min)
+1 2
+Tipsvooroptimaleagents
+Security&Privacy
+Bouwveiligheidin vanafhetbegin.Letop welkedata 
+je deelten stelduidelijkegrenzenin je prompts.
+EffectievePrompts
+Gebruikde 5 bouwstenenvoorelketopic.Maakje rol, 
+contexten instructieszo heldermogelijk.
+GrondigTesten
+Testedgecasesen verschillende 
+gebruikersperspectieven.Zorgvoorgoede 
+foutafhandeling.
+ProTip:
+Agentszijneendoorlopendproces,geeneenmaligproject.Planregelmatigeupdatesenverbeteringenopbasisvangebruikersfeedbackennieu
+--- Page 16 ---
+OverzichtvandeWorkshopstappen
+Vanideenaarwerkendeflowin 4 stappen
+Volgdezestappenomsneleneenvoudigje eigenAI-gedrevenworkflowte bouwenente personaliseren.
+WorkshopFilosofie
+Lerendoorte doen:hetdoelis nietperfectie,maarpraktischeervaringopdoenmetAI-tools.Experimenteer,maakfouten,enontdekhoesnelje kuntitereren.
+Gebruikde 
+voorbeeldprompt
+Startmetdegegeven 
+promptin CopilotStudio
+1
+Testdeflow
+Doorloophetprocesals 
+gebruiker
+2
+Tweaken 
+personaliseer
+Pasdeflowaannaareigen 
+wensen
+3
+Testopnieuwendeel
+Evalueerenpresenteerje 
+resultaten
+4
+Hands-on AI Workshop
+--- Page 17 ---
+AnalyseerdeGebruikerservaring
+Tip:Vraageencollegaomjouwflowte testenvooreennieuweperspectief!
+Hands-on AI Workshop
+Evalueerdeervaringvanje gebruiker
+Nahettestenvanje flow,reflecteeropwatgoedwerktenwatbeterkan.
+Watwerktgoed?
+Zijndevragenduidelijkenlogisch? 
+Verloopthetprocessoepel?
+Is debevestigingduidelijk?
+Watkanbeter?
+Ontbrekener belangrijkeopties? 
+Zijner verwarrendestappen?
+Krijgje feedbackalsietsfoutgaat?
+Maaknotities
+Noteerconcretepuntendieje wiltverbeteren
+Verzamelideeënvoordevolgendestap:tweaken!
+"Eengoedeanalysevormtdebasisvoorgerichteverbeteringen.Letop 
+watgebruikerszoudenkunnenverwarrenof frustreren."
+
+--- Page 18 ---
+Belangrijksteinzichten
+Promptingis eenvaardigheid
+Hetschrijvenvaneffectievepromptsis eenvaardigheid 
+dieje ontwikkeltdooroefening.Precisiein rol,context 
+en instructiesbepaaltde kwaliteitvanAI-output.
+AI-agentszijnmodulair
+De toekomstligt nietbij éénalwetendesuperbot,maar 
+bij gespecialiseerdeagentsdie samenwerkenen elk 
+huneigenexpertisehebben.
+Integratiecreëertwaarde
+AI'sechtekrachtkomttot uitingwanneerhet 
+geïntegreerdwordtmetbestaandeworkflows, 
+systemenen databronnenin je organisatie.
+Onzeworkshopreis
+Vragen& Feedback
+Deelje gedachtenstelje vragen engeeffeedbackoverdeworkshop
+Prompting 
+Mastery
+AI-agents 
+Bouwen
+Flow Praktische 
+Impact
+--- Page 19 ---
+Bedankt!
+Voorje inzeten nieuwsgierigheidtijdensdezehands-on AI workshop.

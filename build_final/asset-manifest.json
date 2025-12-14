@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.e64606ba.css",
-    "main.js": "/static/js/main.73089bd1.js",
+    "main.css": "/static/css/main.2454b30c.css",
+    "main.js": "/static/js/main.5fe37f40.js",
     "static/js/453.f313ca53.chunk.js": "/static/js/453.f313ca53.chunk.js",
     "static/media/Derrel W.png": "/static/media/Derrel W.27347b1aa3669c587caa.png",
     "static/media/work-experience-bg.jpg": "/static/media/work-experience-bg.64ec8e87e02500704981.jpg",
@@ -15,12 +15,12 @@
     "static/media/guns-n-roses.webp": "/static/media/guns-n-roses.0fc43e1f941a88098915.webp",
     "static/media/ac-dc.jpg": "/static/media/ac-dc.44867f491e8e97894eff.jpg",
     "index.html": "/index.html",
-    "main.e64606ba.css.map": "/static/css/main.e64606ba.css.map",
-    "main.73089bd1.js.map": "/static/js/main.73089bd1.js.map",
+    "main.2454b30c.css.map": "/static/css/main.2454b30c.css.map",
+    "main.5fe37f40.js.map": "/static/js/main.5fe37f40.js.map",
     "453.f313ca53.chunk.js.map": "/static/js/453.f313ca53.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.e64606ba.css",
-    "static/js/main.73089bd1.js"
+    "static/css/main.2454b30c.css",
+    "static/js/main.5fe37f40.js"
   ]
 }

@@ -77,7 +77,6 @@ const Speaking: React.FC = () => {
                 ))}
             </div>
 
-            {/* Background Animation Elements */}
             <div className="background-animation">
                 <div className="circle circle-1"></div>
                 <div className="circle circle-2"></div>

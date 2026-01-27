@@ -3,8 +3,8 @@ import './Certifications.css';
 import { FaExternalLinkAlt, FaUniversity } from 'react-icons/fa';
 import { SiUdemy, SiCoursera, SiIeee } from 'react-icons/si';
 import { Certification } from '../types';
-import { getCertifications } from '../queries/getCertifications';
-const iconData: { [key: string]: JSX.Element } = {
+import { mockCertifications } from '../data/mockData';
+const iconData: { [key: string]: React.ReactNode } = {
   'udemy': <SiUdemy />,
   'coursera': <SiCoursera />,
   'ieee': <SiIeee />,
@@ -13,18 +13,9 @@ const iconData: { [key: string]: JSX.Element } = {
 
 const Certifications: React.FC = () => {
 
-  const [certifications, setCertifications] = useState<Certification[]>([]);
+  const certifications = mockCertifications;
 
-  useEffect(() => { 
-    async function fetchCertifications() {
-      const data = await getCertifications();
-      setCertifications(data);
-    }
-
-    fetchCertifications();
-  }, []);
-
-  if (certifications.length === 0) return <div>Loading...</div>;
+  if (certifications.length === 0) return <div>No certifications found.</div>;
 
   return (
     <div className="certifications-container">

@@ -7,6 +7,13 @@
   background-position: center;
 }
 
+.main-profile-container {
+  min-height: 100vh;
+  background-color: #141414;
+  /* Default dark background */
+  overflow-x: hidden;
+}
+
 h1 {
   font-size: 2.5rem;
   margin-bottom: 20px;

@@ -1,6 +1,8 @@
+/* ComingSoon.css - Premium Redesign */
+
 .coming-soon-container {
     min-height: 100vh;
-    background-color: #141414;
+    background: linear-gradient(135deg, #000000 0%, #0f0f0f 100%);
     color: #fff;
     display: flex;
     align-items: center;
@@ -8,6 +10,311 @@
     position: relative;
     overflow: hidden;
     padding: 40px;
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+
+.btn-back-coming-soon {
+    position: absolute;
+    top: 40px;
+    left: 40px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background: rgba(255, 255, 255, 0.05);
+    color: #a3a3a3;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 10px 20px;
+    border-radius: 30px;
+    font-size: 0.95rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    z-index: 50;
+    backdrop-filter: blur(5px);
+}
+
+.btn-back-coming-soon:hover {
+    background: rgba(255, 255, 255, 0.15);
+    color: #fff;
+    transform: translateX(-3px);
+    border-color: rgba(255, 255, 255, 0.3);
+}
+
+.coming-soon-content {
+    max-width: 1000px;
+    text-align: center;
+    z-index: 10;
+    animation: fadeInUp 1s cubic-bezier(0.2, 0.8, 0.2, 1) forwards;
+}
+
+.rocket-icon {
+    font-size: 5rem;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    color: #ea580c;
+    margin-bottom: 40px;
+    animation: float 4s ease-in-out infinite;
+    filter: drop-shadow(0 0 30px rgba(234, 88, 12, 0.4));
+    background: rgba(234, 88, 12, 0.1);
+    width: 140px;
+    height: 140px;
+    border-radius: 50%;
+    border: 1px solid rgba(234, 88, 12, 0.3);
+}
+
+.coming-soon-title {
+    font-size: 4.5rem;
+    font-weight: 800;
+    color: #fff;
+    margin-bottom: 10px;
+    letter-spacing: -2px;
+    line-height: 1;
+}
+
+.coming-soon-subtitle {
+    font-size: 2.5rem;
+    font-weight: 800;
+    background: linear-gradient(to right, #ea580c, #f97316);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 30px;
+    letter-spacing: -0.5px;
+}
+
+.coming-soon-description {
+    font-size: 1.4rem;
+    color: #a3a3a3;
+    line-height: 1.6;
+    margin-bottom: 60px;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.features-preview {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    margin-bottom: 60px;
+}
+
+.feature-item {
+    padding: 40px 30px;
+    background: rgba(255, 255, 255, 0.03);
+    border-radius: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    transition: all 0.4s ease;
+    backdrop-filter: blur(10px);
+}
+
+.feature-item:hover {
+    transform: translateY(-8px);
+    border-color: rgba(234, 88, 12, 0.4);
+    background: rgba(255, 255, 255, 0.06);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.4);
+}
+
+.feature-icon {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: #fff;
+    opacity: 0.9;
+}
+
+.feature-item:hover .feature-icon {
+    color: #ea580c;
+}
+
+.feature-item h3 {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: #fff;
+    margin-bottom: 12px;
+}
+
+.feature-item p {
+    font-size: 1rem;
+    color: #a3a3a3;
+    line-height: 1.5;
+}
+
+.notify-section {
+    margin-bottom: 40px;
+}
+
+.notify-text {
+    font-size: 1.2rem;
+    color: #d4d4d4;
+    margin-bottom: 24px;
+    font-weight: 500;
+}
+
+.notify-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    background: #fff;
+    color: #000;
+    border: none;
+    padding: 18px 48px;
+    border-radius: 50px;
+    font-size: 1.1rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.1);
+}
+
+.notify-btn:hover {
+    transform: scale(1.05);
+    background: #e5e5e5;
+    box-shadow: 0 0 40px rgba(255, 255, 255, 0.2);
+}
+
+.timeline {
+    padding: 16px 32px;
+    background: rgba(255, 255, 255, 0.03);
+    border-radius: 50px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    display: inline-block;
+}
+
+.timeline-text {
+    font-size: 1rem;
+    color: #ea580c;
+    font-weight: 600;
+    margin: 0;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+}
+
+/* Background Animation */
+.background-animation {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: 1;
+    pointer-events: none;
+}
+
+.circle {
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(80px);
+    opacity: 0.15;
+}
+
+.circle-1 {
+    width: 600px;
+    height: 600px;
+    background: #a83b2e;
+    /* Crimson */
+    top: -200px;
+    left: -100px;
+    animation: float 20s infinite ease-in-out;
+}
+
+.circle-2 {
+    width: 500px;
+    height: 500px;
+    background: #2e82ff;
+    /* Azure */
+    bottom: -150px;
+    right: -100px;
+    animation: float 15s infinite ease-in-out reverse;
+}
+
+.circle-3 {
+    width: 300px;
+    height: 300px;
+    background: #ea580c;
+    /* Orange */
+    top: 40%;
+    left: 60%;
+    opacity: 0.1;
+    animation: pulse 8s infinite ease-in-out;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes float {
+
+    0%,
+    100% {
+        transform: translate(0, 0);
+    }
+
+    50% {
+        transform: translate(30px, -30px);
+    }
+}
+
+@keyframes pulse {
+
+    0%,
+    100% {
+        transform: scale(1);
+        opacity: 0.1;
+    }
+
+    50% {
+        transform: scale(1.2);
+        opacity: 0.2;
+    }
+}
+
+@media (max-width: 968px) {
+    .coming-soon-title {
+        font-size: 3.5rem;
+    }
+
+    .features-preview {
+        grid-template-columns: 1fr;
+        max-width: 400px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+@media (max-width: 640px) {
+    .coming-soon-container {
+        padding: 100px 20px 40px;
+    }
+
+    .coming-soon-title {
+        font-size: 2.5rem;
+    }
+
+    .coming-soon-subtitle {
+        font-size: 1.8rem;
+    }
+
+    .rocket-icon {
+        width: 100px;
+        height: 100px;
+        font-size: 3.5rem;
+    }
+
+    .notify-btn {
+        padding: 16px 36px;
+        width: 100%;
+        justify-content: center;
+    }
 }
 
 .btn-back-coming-soon {

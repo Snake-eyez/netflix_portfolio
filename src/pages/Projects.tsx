@@ -4,10 +4,10 @@ import './Projects.css';
 import { FaReact, FaNodeJs, FaAws, FaDatabase, FaDocker, FaAngular, FaGithub, FaGitlab, FaGoogle, FaJava, FaJenkins, FaMicrosoft, FaPython, FaVuejs, FaRobot } from 'react-icons/fa';
 import { SiRubyonrails, SiPostgresql, SiMongodb, SiMaterialdesign, SiHtml5, SiCss3, SiJquery, SiAwsamplify, SiFirebase, SiTerraform, SiArgo, SiTypescript, SiTailwindcss, SiSupabase } from 'react-icons/si';
 import { Project } from '../types';
-import { getProjects } from '../queries/getProjects';
+import { mockProjects } from '../data/mockData';
 import { GrDeploy, GrKubernetes } from "react-icons/gr";
 
-const techIcons: { [key: string]: JSX.Element } = {
+const techIcons: { [key: string]: React.ReactNode } = {
   "ReactJS": <FaReact />,
   "NodeJS": <FaNodeJs />,
   "AWS": <FaAws />,
@@ -88,16 +88,7 @@ const featuredProjects = [
 
 const Projects: React.FC = () => {
   const navigate = useNavigate();
-  const [projects, setProjects] = useState<Project[]>([])
-
-  useEffect(() => {
-    async function fetchProjects() {
-      const data = await getProjects();
-      setProjects(data);
-    }
-
-    fetchProjects()
-  }, [])
+  const projects = mockProjects;
 
   return (
     <div className="projects-container">

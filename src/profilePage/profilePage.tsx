@@ -15,7 +15,7 @@ const ProfilePage: React.FC = () => {
     ? (profileName as ProfileType)
     : 'Professional';
   return (
-    <>
+    <div className="main-profile-container">
       <div
         className="profile-page"
         style={{ backgroundImage: `url(${backgroundGif})` }}
@@ -23,7 +23,7 @@ const ProfilePage: React.FC = () => {
         <ProfileBanner profile={profile} />
       </div>
       <TopPicksRow profile={profile} />
-    </>
+    </div>
   );
 };
 

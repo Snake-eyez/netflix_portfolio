@@ -1,9 +1,0 @@
-
-> netflix_portfolio@0.1.0 build
-> react-scripts build
-
-Failed to compile.
-
-EBUSY: resource busy or locked, unlink 'C:\Github\netflix_portfolio-1\build\static\js\main.73089bd1.js.map'
-
-

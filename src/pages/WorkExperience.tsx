@@ -181,6 +181,7 @@ const WorkExperience: React.FC = () => {
         <div className="episode-list">
           {season1Data.map((item, index) => (
             <div className="episode-item" key={`s1-${index}`}>
+              <div className="card-bg-glow" />
               <div className="episode-number">{index + 1}</div>
               <div className="episode-thumbnail">
                 <div style={{
@@ -223,6 +224,7 @@ const WorkExperience: React.FC = () => {
               <div className="episode-number">{index + 1}</div>
 
               <div className="episode-content">
+                <div className="card-bg-glow" />
                 <div className="episode-header">
                   <span className="episode-name">{item.title}</span>
                   <span className="episode-duration">{item.date}</span>

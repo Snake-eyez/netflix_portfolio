@@ -1,3 +1,7 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 /* 
   Design PRD: Netflix-Inspired Portfolio
   Version: 1.0

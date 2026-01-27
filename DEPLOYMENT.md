@@ -42,7 +42,6 @@ firebase deploy --only hosting
 
 1. Visit https://derrelwinter.com to see your live site
 2. If you want a custom domain, set it up in Firebase Console (Done!)
-3. Delete the Firebase App Hosting backend if you don't need it
 
 ## 🐛 If Site Doesn't Load
 

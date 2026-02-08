@@ -2,6 +2,7 @@ import React from 'react';
 import { FaArrowLeft, FaPython, FaJs, FaAws, FaDocker, FaDatabase, FaServer, FaCode, FaBrain, FaNetworkWired, FaUsers, FaLightbulb, FaChalkboardTeacher, FaComments, FaSitemap } from 'react-icons/fa';
 import { SiTypescript, SiTerraform, SiKubernetes, SiPostgresql, SiMongodb, SiVmware, SiOpenai, SiPytorch, SiTensorflow, SiLangchain } from 'react-icons/si';
 import { useNavigate } from 'react-router-dom';
+import BackButton from '../components/BackButton';
 import './Skills.css';
 
 const skillsData = {
@@ -33,6 +34,7 @@ const skillsData = {
     { name: "Cross-Functional Comms", level: "Expert", years: "15+", icon: <FaComments /> }
   ]
 };
+
 
 const Skills: React.FC = () => {
   const navigate = useNavigate();
@@ -69,11 +71,9 @@ const Skills: React.FC = () => {
 
   return (
     <div className="skills-page-container">
+      <BackButton />
       <div className="skills-hero">
         <div className="hero-content">
-          <button onClick={() => navigate('/profile/Professional')} className="back-button">
-            <FaArrowLeft /> Back to Profile
-          </button>
           <h1 className="page-title">Technical Expertise <span className="title-dot">.</span></h1>
           <p className="page-subtitle">A deep dive into my capabilities across AI, Engineering, and Leadership.</p>
         </div>

@@ -4,6 +4,8 @@ import { useNavigate } from 'react-router-dom';
 import { portfolioItems } from '../data/portfolioData';
 import './Portfolio.css';
 
+import BackButton from '../components/BackButton';
+
 export default function Portfolio(): React.JSX.Element {
     const navigate = useNavigate();
     const [selectedImage, setSelectedImage] = useState<number | null>(null);
@@ -30,9 +32,7 @@ export default function Portfolio(): React.JSX.Element {
 
     return (
         <div className="portfolio-container">
-            <button onClick={() => navigate(-1)} className="btn-back-portfolio">
-                <FaArrowLeft /> Back
-            </button>
+            <BackButton />
 
             <div className="portfolio-hero">
                 <h1 className="portfolio-title">Creative Portfolio</h1>

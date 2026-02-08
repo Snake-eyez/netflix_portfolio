@@ -3,6 +3,8 @@ import { FaArrowLeft, FaVideo, FaRobot, FaHeadset, FaClock } from 'react-icons/f
 import { useNavigate } from 'react-router-dom';
 import './CaseStudy.css';
 
+import BackButton from '../components/BackButton';
+
 const AIAvatarCaseStudy: React.FC = () => {
     const navigate = useNavigate();
 
@@ -37,9 +39,7 @@ const AIAvatarCaseStudy: React.FC = () => {
         <div className="case-study-container">
             {/* Hero Section */}
             <div className="case-study-hero">
-                <button onClick={() => navigate(-1)} className="btn-back">
-                    <FaArrowLeft /> Back
-                </button>
+                <BackButton />
 
                 <div className="hero-content">
                     <span className="project-tag">Internal ChatiX AI Project</span>

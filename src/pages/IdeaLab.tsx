@@ -3,14 +3,14 @@ import { FaArrowLeft, FaRocket, FaBell, FaLightbulb, FaMicrochip, FaBrain } from
 import { useNavigate } from 'react-router-dom';
 import './ComingSoon.css';
 
+import BackButton from '../components/BackButton';
+
 const IdeaLab: React.FC = () => {
     const navigate = useNavigate();
 
     return (
         <div className="coming-soon-container">
-            <button onClick={() => navigate(-1)} className="btn-back-coming-soon">
-                <FaArrowLeft /> Back
-            </button>
+            <BackButton />
 
             <div className="coming-soon-content">
                 <div className="rocket-icon">
@@ -45,7 +45,7 @@ const IdeaLab: React.FC = () => {
                     </button>
                 </div>
                 <div className="timeline">
-                    <p className="timeline-text">Opening: Q3 2025</p>
+                    <p className="timeline-text">Opening: Q3 2026</p>
                 </div>
             </div>
 

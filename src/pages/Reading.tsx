@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { FaArrowLeft, FaSearch, FaBook } from 'react-icons/fa';
 import { useNavigate } from 'react-router-dom';
+import BackButton from '../components/BackButton';
 import './Reading.css';
 
 interface Book {
@@ -114,6 +115,7 @@ const books: Book[] = [
   { title: 'Monas Hieroglyphica', author: 'John Dee', genre: 'Spirituality', rating: 5, yearRead: 2025, pages: 112 },
 ];
 
+
 const genres = ['All', 'Self-Improvement', 'Business', 'Spirituality', 'Psychology', 'History', 'Biography', 'Finance', 'Technology', 'Philosophy', 'Programming', 'Leadership', 'Strategy', 'Productivity', 'Science', 'Literature', 'Mythology'];
 
 const Reading: React.FC = () => {
@@ -140,9 +142,7 @@ const Reading: React.FC = () => {
 
   return (
     <div className="reading-page-container">
-      <button onClick={() => navigate(-1)} className="btn-back-reading">
-        <FaArrowLeft /> Back
-      </button>
+      <BackButton />
 
       <div className="reading-header">
         <div className="reading-header-top">

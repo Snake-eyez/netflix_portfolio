@@ -1,17 +1,16 @@
 import React from 'react';
-import { FaArrowLeft, FaCalendar, FaClock, FaUsers, FaExternalLinkAlt } from 'react-icons/fa';
+import { FaCalendar, FaClock, FaUsers, FaExternalLinkAlt } from 'react-icons/fa';
 import { useNavigate } from 'react-router-dom';
 import { workshops } from '../data/workshopsData';
 import './Workshops.css';
+import BackButton from '../components/BackButton';
 
 export default function Workshops(): React.JSX.Element {
     const navigate = useNavigate();
 
     return (
         <div className="workshops-container">
-            <button onClick={() => navigate(-1)} className="btn-back-workshops">
-                <FaArrowLeft /> Back
-            </button>
+            <BackButton />
 
             <div className="workshops-hero">
                 <h1 className="workshops-title">AI Workshops</h1>

@@ -3,14 +3,14 @@ import { FaArrowLeft, FaBolt, FaHeart, FaUsers, FaSync, FaEye, FaGlobe, FaShield
 import { useNavigate } from 'react-router-dom';
 import './VisionMission.css';
 
+import BackButton from '../components/BackButton';
+
 const VisionMission: React.FC = () => {
     const navigate = useNavigate();
 
     return (
         <div className="vision-mission-container">
-            <button onClick={() => navigate(-1)} className="btn-back-vision">
-                <FaArrowLeft /> Back to Dashboard
-            </button>
+            <BackButton />
 
             {/* Header Section */}
             <div className="vision-header">

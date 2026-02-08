@@ -3,6 +3,8 @@ import { FaArrowLeft, FaEnvelope, FaPaperPlane } from 'react-icons/fa';
 import { useNavigate } from 'react-router-dom';
 import './ContactMe.css';
 
+import BackButton from '../components/BackButton';
+
 const ContactMe: React.FC = () => {
   const navigate = useNavigate();
   const [formData, setFormData] = useState({
@@ -38,9 +40,7 @@ const ContactMe: React.FC = () => {
 
   return (
     <div className="contact-container">
-      <button onClick={() => navigate(-1)} className="btn-back-contact">
-        <FaArrowLeft /> Back
-      </button>
+      <BackButton />
 
       <div className="contact-split">
         {/* Left Side - Contact Form */}

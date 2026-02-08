@@ -26,8 +26,9 @@ import ResourceVault from './pages/ResourceVault';
 import InteractiveLearning from './pages/InteractiveLearning';
 import VisionMission from './pages/VisionMission';
 import IdeaLab from './pages/IdeaLab';
-import Speaking from './pages/Speaking';
+import Methodology from './pages/Methodology';
 import Outstandr from './pages/Outstandr';
+import Speaking from './pages/Speaking';
 
 const App: React.FC = () => {
   return (
@@ -57,6 +58,7 @@ const App: React.FC = () => {
       <Route path="/interactive-learning" element={<Layout><InteractiveLearning /></Layout>} />
       <Route path="/vision-mission" element={<Layout><VisionMission /></Layout>} />
       <Route path="/idea-lab" element={<Layout><IdeaLab /></Layout>} />
+      <Route path="/methodology" element={<Layout><Methodology /></Layout>} />
       <Route path="/speaking" element={<Layout><Speaking /></Layout>} />
       <Route path="/outstandr" element={<Layout><Outstandr /></Layout>} />
     </Routes>

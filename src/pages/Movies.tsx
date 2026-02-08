@@ -4,6 +4,8 @@ import { useNavigate } from 'react-router-dom';
 import { movies } from '../data/moviesData';
 import './Movies.css';
 
+import BackButton from '../components/BackButton';
+
 const genres = ['All', 'Drama', 'Crime', 'Action', 'Sci-Fi', 'Thriller', 'Animation', 'Adventure', 'Comedy', 'Romance', 'Biography', 'Horror'];
 
 export default function Movies(): React.JSX.Element {
@@ -33,9 +35,7 @@ export default function Movies(): React.JSX.Element {
 
     return (
         <div className="movies-page-container">
-            <button onClick={() => navigate(-1)} className="btn-back-movies">
-                <FaArrowLeft /> Back
-            </button>
+            <BackButton />
 
             <div className="movies-header">
                 <div className="movies-header-top">

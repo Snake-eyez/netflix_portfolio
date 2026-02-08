@@ -3,14 +3,14 @@ import { FaArrowLeft, FaHeart, FaBuilding, FaGlobe, FaBullseye, FaUsers, FaRocke
 import { useNavigate } from 'react-router-dom';
 import './Outstandr.css';
 
+import BackButton from '../components/BackButton';
+
 const Outstandr: React.FC = () => {
     const navigate = useNavigate();
 
     return (
         <div className="outstandr-container">
-            <button onClick={() => navigate(-1)} className="btn-back-outstandr">
-                <FaArrowLeft /> Back to Dashboard
-            </button>
+            <BackButton />
 
             {/* Header Section */}
             <div className="outstandr-header">

@@ -101,10 +101,10 @@ export const dashboardData: Record<ProfileType, Tile[]> = {
             route: "/idea-lab"
         },
         {
-            label: 'EVENTS',
-            title: "Speaking Events",
+            label: 'METHOD',
+            title: "Methodology",
             color: "linear-gradient(180deg, #854d0e 0%, #713f12 100%)",
-            route: "/speaking"
+            route: "/methodology"
         },
         {
             label: 'VENTURES',

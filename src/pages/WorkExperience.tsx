@@ -2,6 +2,7 @@ import React from 'react';
 import { FaPlay, FaArrowLeft } from 'react-icons/fa';
 import { useNavigate } from 'react-router-dom';
 import './WorkExperience.css';
+import BackButton from '../components/BackButton';
 
 const season1Data = [
   {
@@ -160,9 +161,7 @@ const WorkExperience: React.FC = () => {
           <button onClick={() => navigate('/contact-me')} className="btn-primary">
             <FaPlay /> Request CV
           </button>
-          <button onClick={() => navigate('/profile/Professional')} className="btn-primary" style={{ backgroundColor: 'rgba(109, 109, 110, 0.7)', color: '#fff', border: 'none' }}>
-            <FaArrowLeft /> Back
-          </button>
+          <BackButton />
         </div>
 
         <div className="we-description" style={{ maxWidth: '800px', fontSize: '1.1rem', lineHeight: '1.6', textShadow: '1px 1px 2px rgba(0,0,0,0.5)', marginBottom: '20px' }}>

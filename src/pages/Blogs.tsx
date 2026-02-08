@@ -4,14 +4,14 @@ import { useNavigate } from 'react-router-dom';
 import { blogs } from '../data/blogsData';
 import './Blogs.css';
 
+import BackButton from '../components/BackButton';
+
 export default function Blogs(): React.JSX.Element {
   const navigate = useNavigate();
 
   return (
     <div className="blogs-page-container">
-      <button onClick={() => navigate(-1)} className="btn-back-blogs">
-        <FaArrowLeft /> Back
-      </button>
+      <BackButton />
 
       <div className="blogs-hero">
         <h1 className="blogs-page-title">Essays & Blogs</h1>

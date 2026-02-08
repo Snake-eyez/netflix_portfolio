@@ -3,6 +3,8 @@ import { FaArrowLeft, FaExternalLinkAlt } from 'react-icons/fa';
 import { useNavigate } from 'react-router-dom';
 import './Products.css';
 
+import BackButton from '../components/BackButton';
+
 const Products: React.FC = () => {
     const navigate = useNavigate();
 
@@ -40,9 +42,7 @@ const Products: React.FC = () => {
 
     return (
         <div className="products-container">
-            <button onClick={() => navigate(-1)} className="btn-back-products">
-                <FaArrowLeft /> Back
-            </button>
+            <BackButton />
 
             <div className="products-hero">
                 <h1 className="products-title">Digital Products</h1>

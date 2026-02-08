@@ -1,6 +1,6 @@
-/* Speaking.css - Premium Redesign */
+/* Methodology.css - Premium Redesign */
 
-.speaking-container {
+.methodology-container {
     min-height: 100vh;
     background: linear-gradient(135deg, #000000 0%, #121212 100%);
     color: #fff;
@@ -62,7 +62,7 @@
 }
 
 /* Header */
-.speaking-header {
+.methodology-header {
     text-align: center;
     margin-bottom: 60px;
     margin-top: 40px;
@@ -70,7 +70,7 @@
     position: relative;
 }
 
-.speaking-title {
+.methodology-title {
     font-size: 3.5rem;
     font-weight: 800;
     margin-bottom: 20px;
@@ -81,7 +81,7 @@
     letter-spacing: -1px;
 }
 
-.speaking-description {
+.methodology-description {
     font-size: 1.2rem;
     color: #a3a3a3;
     max-width: 650px;
@@ -243,7 +243,7 @@
 }
 
 @media (max-width: 768px) {
-    .speaking-title {
+    .methodology-title {
         font-size: 2.2rem;
     }
 

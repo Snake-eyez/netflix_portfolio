@@ -3,14 +3,14 @@ import { FaArrowLeft, FaRocket, FaBell, FaLaptopCode, FaGamepad, FaChalkboardTea
 import { useNavigate } from 'react-router-dom';
 import './ComingSoon.css'; // Reusing the same CSS
 
+import BackButton from '../components/BackButton';
+
 const InteractiveLearning: React.FC = () => {
     const navigate = useNavigate();
 
     return (
         <div className="coming-soon-container">
-            <button onClick={() => navigate(-1)} className="btn-back-coming-soon">
-                <FaArrowLeft /> Back
-            </button>
+            <BackButton />
 
             <div className="coming-soon-content">
                 <div className="rocket-icon">
@@ -45,7 +45,7 @@ const InteractiveLearning: React.FC = () => {
                     </button>
                 </div>
                 <div className="timeline">
-                    <p className="timeline-text">Launching: Q3 2025</p>
+                    <p className="timeline-text">Launching: Q3 2026</p>
                 </div>
             </div>
 

@@ -1,7 +1,8 @@
-import React, { useState } from 'react';
+import React from 'react';
+import { FaLightbulb, FaArrowLeft } from 'react-icons/fa';
 import { useNavigate } from 'react-router-dom';
-import { FaArrowLeft, FaLightbulb, FaCogs, FaChalkboardTeacher, FaChevronDown, FaChevronUp } from 'react-icons/fa';
 import './Speaking.css';
+import BackButton from '../components/BackButton';
 
 interface Presentation {
     id: string;
@@ -28,39 +29,11 @@ const presentations: Presentation[] = [
             'Strategic Implementation: Collaborating with "AI" to create feasible, innovative AI integration plans'
         ]
     },
-    {
-        id: '2',
-        title: 'Flowgrammers & Multi-Agent Systems',
-        type: 'Technical Keynote',
-        date: 'Nov 2025',
-        icon: <FaCogs />,
-        summary: 'A visionary presentation defining the "Flowgrammer" role a hybrid between technical architect and business process thinker. This talk covered the shift towards Agentic AI, where "Master Agents" orchestrate specialized sub-agents (HR, IT, Fleet) to automate complex workflows without code using Microsoft Copilot Studio and Power Automate. It emphasized that AI is a way of working, not just a tool, and demonstrated how to build self-correcting, multi-agent systems that integrate people, data, and systems.',
-        highlights: [
-            'The Rise of the Flowgrammer: Orchestrating logic without writing code',
-            'Multi-Agent Orchestration: Master Agents routing tasks to specialized worker agents',
-            'Live Demo: Building a Master Agent in Copilot Studio with seamless hands-offs',
-            'Integration: Connecting AI agents to Power Automate for real-world actions (e.g., SharePoint, Email)'
-        ]
-    },
-    {
-        id: '3',
-        title: 'Hands-on AI Workshop: From Prompting to Agents',
-        type: 'Technical Training',
-        date: '2025',
-        icon: <FaChalkboardTeacher />,
-        summary: 'A comprehensive guide for IT professionals moving from basic prompting to building autonomous agents. This session covered "Prompting Mastery" using the 5 building blocks (Role, Task, Context, Output, Instructions), compared major models (Gemini, Claude, ChatGPT), and provided a step-by-step framework for building agents in Microsoft Copilot Studio. The workshop emphasized the practical application of AI, shifting from passive usage to active integration in enterprise workflows.',
-        highlights: [
-            'Prompting Mastery: The 6-layer framework for precise, predictable AI output',
-            'Model Comparison: Strengths of Gemini (Multimodal) vs Claude (Coding) vs ChatGPT (Versatile)',
-            'Building Agents: A 5-step process from Use-Case to Adaptive Cards in Copilot Studio',
-            'Security & Best Practices: Guardrails for deploying agents in enterprise environments'
-        ]
-    }
 ];
 
 const Speaking: React.FC = () => {
     const navigate = useNavigate();
-    const [expandedId, setExpandedId] = useState<string | null>(null);
+    const [expandedId, setExpandedId] = React.useState<string | null>('1');
 
     const toggleExpand = (id: string) => {
         setExpandedId(expandedId === id ? null : id);
@@ -68,21 +41,29 @@ const Speaking: React.FC = () => {
 
     return (
         <div className="speaking-container">
-            <button onClick={() => navigate(-1)} className="btn-back-speaking">
-                <FaArrowLeft /> Back
-            </button>
+            <BackButton />
+
+            {/* Background Animation */}
+            <div className="background-animation">
+                <div className="circle circle-1"></div>
+                <div className="circle circle-2"></div>
+            </div>
 
             <div className="speaking-header">
-                <h1 className="speaking-title">Speaking & Presentations</h1>
+                <h1 className="speaking-title">Speaking & Workshops</h1>
                 <p className="speaking-description">
-                    Core insights and summaries from my recent technical talks, workshops, and product demonstrations.
+                    Sharing insights on AI, technology, and the future of work through interactive sessions and strategic workshops.
                 </p>
             </div>
 
             <div className="presentations-list">
                 {presentations.map((item) => (
-                    <div key={item.id} className={`presentation-item ${expandedId === item.id ? 'expanded' : ''}`}>
-                        <div className="presentation-summary-header" onClick={() => toggleExpand(item.id)}>
+                    <div
+                        key={item.id}
+                        className={`presentation-item ${expandedId === item.id ? 'expanded' : ''}`}
+                        onClick={() => toggleExpand(item.id)}
+                    >
+                        <div className="presentation-summary-header">
                             <div className="presentation-icon-wrapper">
                                 {item.icon}
                             </div>
@@ -91,30 +72,25 @@ const Speaking: React.FC = () => {
                                 <h3 className="presentation-title">{item.title}</h3>
                             </div>
                             <div className="presentation-expand-icon">
-                                {expandedId === item.id ? <FaChevronUp /> : <FaChevronDown />}
+                                ▼
                             </div>
                         </div>
 
                         <div className="presentation-details">
                             <div className="presentation-summary-text">
-                                <p>{item.summary}</p>
+                                {item.summary}
                             </div>
                             <div className="presentation-highlights">
-                                <h4>Key Takeaways</h4>
+                                4<h4>Key Takeaways</h4>
                                 <ul>
-                                    {item.highlights.map((point, idx) => (
-                                        <li key={idx}>{point}</li>
+                                    {item.highlights.map((highlight, idx) => (
+                                        <li key={idx}>{highlight}</li>
                                     ))}
                                 </ul>
                             </div>
                         </div>
                     </div>
                 ))}
-            </div>
-
-            <div className="background-animation">
-                <div className="circle circle-1"></div>
-                <div className="circle circle-2"></div>
             </div>
         </div>
     );

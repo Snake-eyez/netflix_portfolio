@@ -48,10 +48,7 @@
   font-size: 4rem;
   font-weight: 800;
   margin-bottom: 20px;
-  background: linear-gradient(to right, #fff, #a3a3a3);
-  background-clip: text;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  color: #ffffff;
   letter-spacing: -1px;
 }
 
@@ -335,10 +332,7 @@
 .blogs-page-title {
   font-size: 4rem;
   font-weight: 700;
-  background: linear-gradient(135deg, #ea580c 0%, #f97316 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
+  color: #ffffff;
   margin-bottom: 20px;
 }
 

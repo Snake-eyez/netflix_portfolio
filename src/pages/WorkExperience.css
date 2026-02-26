@@ -255,10 +255,7 @@
 
 .season-2 .episodes-title {
   font-size: 3rem;
-  background: linear-gradient(90deg, #E50914 0%, #ff4f4f 100%);
-  -webkit-background-clip: text;
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
+  color: #ffffff;
   margin-bottom: 60px;
   display: block;
   text-align: center;

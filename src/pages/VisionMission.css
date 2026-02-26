@@ -44,11 +44,7 @@
     font-size: var(--font-size-display);
     font-weight: var(--font-weight-bold);
     margin-bottom: var(--spacing-lg);
-    background: linear-gradient(90deg, #a855f7, #ec4899);
-    /* Purple to Pink gradient */
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
+    color: #ffffff;
 }
 
 .vision-page-subtitle {

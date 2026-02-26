@@ -1,18 +1,15 @@
 import React from 'react';
-import { FaArrowLeft, FaRocket, FaBell, FaLightbulb, FaMicrochip, FaBrain } from 'react-icons/fa';
-import { useNavigate } from 'react-router-dom';
+import { FaRocket, FaBell, FaLightbulb, FaMicrochip, FaBrain } from 'react-icons/fa';
 import './ComingSoon.css';
 
 import BackButton from '../components/BackButton';
 
 const IdeaLab: React.FC = () => {
-    const navigate = useNavigate();
-
     return (
-        <div className="coming-soon-container">
+        <div className="coming-soon-container nf-page nf-theme-vision">
             <BackButton />
 
-            <div className="coming-soon-content">
+            <div className="coming-soon-content nf-hero">
                 <div className="rocket-icon">
                     <FaLightbulb />
                 </div>

@@ -9,10 +9,10 @@ export default function Workshops(): React.JSX.Element {
     const navigate = useNavigate();
 
     return (
-        <div className="workshops-container">
+        <div className="workshops-container nf-page nf-theme-creative">
             <BackButton />
 
-            <div className="workshops-hero">
+            <div className="workshops-hero nf-hero">
                 <h1 className="workshops-title">AI Workshops</h1>
                 <p className="workshops-subtitle">
                     Hands-on learning experiences to accelerate your AI journey

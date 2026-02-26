@@ -1,5 +1,5 @@
 import React from 'react';
-import { FaArrowLeft, FaExternalLinkAlt } from 'react-icons/fa';
+import { FaExternalLinkAlt } from 'react-icons/fa';
 import { useNavigate } from 'react-router-dom';
 import { blogs } from '../data/blogsData';
 import './Blogs.css';
@@ -10,10 +10,10 @@ export default function Blogs(): React.JSX.Element {
   const navigate = useNavigate();
 
   return (
-    <div className="blogs-page-container">
+    <div className="blogs-page-container nf-page nf-theme-creative">
       <BackButton />
 
-      <div className="blogs-hero">
+      <div className="blogs-hero nf-hero">
         <h1 className="blogs-page-title">Essays & Blogs</h1>
         <p className="blogs-page-subtitle">
           Thoughts, tutorials, and insights on software development, AI, and technology
@@ -31,7 +31,7 @@ export default function Blogs(): React.JSX.Element {
             style={{ '--delay': `${index * 0.15}s` } as React.CSSProperties}
           >
             <div className="blog-page-image-container">
-              <img src={blog.image} alt={blog.title} className="blog-page-image" />
+              <img src={blog.image} alt={blog.title} className="blog-page-image" loading="lazy" decoding="async" />
               <div className="blog-page-platform-badge">
                 {blog.icon}
                 <span>{blog.platform}</span>

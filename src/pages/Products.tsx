@@ -1,13 +1,10 @@
 import React from 'react';
-import { FaArrowLeft, FaExternalLinkAlt } from 'react-icons/fa';
-import { useNavigate } from 'react-router-dom';
+import { FaExternalLinkAlt } from 'react-icons/fa';
 import './Products.css';
 
 import BackButton from '../components/BackButton';
 
 const Products: React.FC = () => {
-    const navigate = useNavigate();
-
     const products = [
         {
             title: "The Consciousness Council Prompt",
@@ -55,7 +52,7 @@ const Products: React.FC = () => {
                 {products.map((product, index) => (
                     <div className="product-card" key={index} style={{ '--delay': `${index * 0.1}s` } as React.CSSProperties}>
                         <div className="product-image-container">
-                            <img src={product.image} alt={product.title} className="product-image" />
+                            <img src={product.image} alt={product.title} className="product-image" loading="lazy" decoding="async" />
                             <div className="product-tag">{product.tag}</div>
                         </div>
 

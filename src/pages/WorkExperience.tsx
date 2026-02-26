@@ -1,5 +1,5 @@
 import React from 'react';
-import { FaPlay, FaArrowLeft } from 'react-icons/fa';
+import { FaPlay } from 'react-icons/fa';
 import { useNavigate } from 'react-router-dom';
 import './WorkExperience.css';
 import BackButton from '../components/BackButton';

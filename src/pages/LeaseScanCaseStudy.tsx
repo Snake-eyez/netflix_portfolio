@@ -1,13 +1,10 @@
 import React from 'react';
-import { FaArrowLeft, FaMobileAlt, FaClock, FaShieldAlt, FaEuroSign } from 'react-icons/fa';
-import { useNavigate } from 'react-router-dom';
+import { FaMobileAlt, FaClock, FaShieldAlt, FaEuroSign } from 'react-icons/fa';
 import './CaseStudy.css';
 
 import BackButton from '../components/BackButton';
 
 const LeaseScanCaseStudy: React.FC = () => {
-    const navigate = useNavigate();
-
     const problemSolutions = [
         {
             problem: "Damage assessments are subjective and lead to disputes",

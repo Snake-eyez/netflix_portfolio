@@ -1,34 +1,27 @@
 import React from 'react';
-import { FaArrowLeft, FaHeart, FaBuilding, FaGlobe, FaBullseye, FaUsers, FaRocket, FaInfinity } from 'react-icons/fa';
-import { useNavigate } from 'react-router-dom';
+import { FaBuilding, FaBullseye, FaGlobe, FaHeart, FaInfinity, FaRocket, FaUsers } from 'react-icons/fa';
+import BackButton from '../components/BackButton';
 import './Outstandr.css';
 
-import BackButton from '../components/BackButton';
-
 const Outstandr: React.FC = () => {
-    const navigate = useNavigate();
-
     return (
-        <div className="outstandr-container">
+        <div className="outstandr-container nf-page nf-theme-vision">
             <BackButton />
 
-            {/* Header Section */}
-            <div className="outstandr-header">
+            <div className="outstandr-header nf-hero">
                 <h1 className="outstandr-page-title">Outstandr Vision</h1>
                 <p className="outstandr-page-subtitle">
-                    Co-foundeder • Building the future where AI creates endlesspossibilities
+                    Co-founder | Building the future where AI creates endless possibilities
                 </p>
             </div>
 
-            {/* Vision Card Section */}
             <div className="vision-card-section">
                 <div className="outstandr-vision-card">
                     <h2 className="vision-card-title">My Vision for Outstandr</h2>
                     <p className="vision-text">
                         As co-founder of Outstandr, I envision a world where AI transformation is accessible to every organization.
                         My vision combines 20+ years of IT expertise with a deep understanding of human potential.
-                        I believe AI doesn't replace human creativity but amplifies it, where businesses can seamlessly
-                        integrate advanced technology to drive unprecedented growth and success.
+                        I believe AI does not replace human creativity, it amplifies it.
                     </p>
 
                     <div className="role-box">
@@ -36,9 +29,9 @@ const Outstandr: React.FC = () => {
                             <FaHeart /> My Role as Co-Founder
                         </div>
                         <p className="role-text">
-                            Creating fusion between AI transformation and the expansion at Sonex Partners, in my work at Outstandr
-                            spans from AI integration strategy to spiritual evolution to ensure we create growth and the Outstandr
-                            mission of exceptional AI transformation.
+                            I connect AI transformation strategy with Sonex Partners expansion goals. My work spans AI integration,
+                            operating model design, and long-term capability building so organizations can scale with clarity and
+                            measurable business value.
                         </p>
                     </div>
 
@@ -63,7 +56,6 @@ const Outstandr: React.FC = () => {
                 </div>
             </div>
 
-            {/* Strategic Pillars Section */}
             <div className="pillars-section">
                 <h2 className="section-heading">Strategic Pillars</h2>
                 <div className="pillars-grid">
@@ -73,8 +65,8 @@ const Outstandr: React.FC = () => {
                         </div>
                         <h3>AI Business Transformation</h3>
                         <p>
-                            We are transforming businesses through intelligent AI adoption and digital transformation
-                            that drives competitive advantage and measurable ROI.
+                            We transform businesses through practical AI adoption and digital systems that drive
+                            measurable ROI and operational resilience.
                         </p>
                     </div>
                     <div className="pillar-card">
@@ -83,8 +75,8 @@ const Outstandr: React.FC = () => {
                         </div>
                         <h3>AI Training & Education</h3>
                         <p>
-                            I'm building a worldwide network of AI-savvy leaders through comprehensive training
-                            programs and the University of Outstandr.
+                            I build a worldwide network of AI-ready leaders through focused training programs
+                            and the University of Outstandr.
                         </p>
                     </div>
                     <div className="pillar-card">
@@ -93,24 +85,23 @@ const Outstandr: React.FC = () => {
                         </div>
                         <h3>Conscious AI Integration</h3>
                         <p>
-                            We are pioneering in the intersection of technology to create
-                            more meaningful and purposeful AI solutions.
+                            We innovate at the intersection of technology and human-centered design to create
+                            meaningful, ethical, and practical AI solutions.
                         </p>
                     </div>
                     <div className="pillar-card">
                         <div className="pillar-icon-box bg-purple">
                             <FaUsers />
                         </div>
-                        <h3>Future of Business Revolution</h3>
+                        <h3>Future of Business</h3>
                         <p>
-                            We are redefining how business and AI collaboration in the biggest disruption of the
-                            human experience and leadership data.
+                            We are redefining how leadership teams and AI systems collaborate during one of the
+                            biggest shifts in modern business.
                         </p>
                     </div>
                 </div>
             </div>
 
-            {/* Journey to the Future Section */}
             <div className="timeline-section">
                 <h2 className="section-heading">Journey to the Future</h2>
 
@@ -118,7 +109,7 @@ const Outstandr: React.FC = () => {
                     <div className="timeline-year">2024</div>
                     <div className="timeline-content">
                         <h3>Foundation Building</h3>
-                        <p>Building Outstandr as an international center of excellence with AI obsessives and business builders.</p>
+                        <p>Built Outstandr as an international center of excellence with AI obsessives and business builders.</p>
                     </div>
                 </div>
 
@@ -127,8 +118,8 @@ const Outstandr: React.FC = () => {
                     <div className="timeline-content">
                         <h3>Scale & Expand</h3>
                         <ul className="timeline-list">
-                            <li>• Expand Outstandr to major business markets</li>
-                            <li>• Scale transformative AI development excellence</li>
+                            <li>Expand Outstandr into major business markets</li>
+                            <li>Scale transformative AI delivery excellence</li>
                         </ul>
                     </div>
                 </div>
@@ -138,8 +129,8 @@ const Outstandr: React.FC = () => {
                     <div className="timeline-content">
                         <h3>Innovation Leadership</h3>
                         <ul className="timeline-list">
-                            <li>• Establish Outstandr thought leaders in business transformation</li>
-                            <li>• Launch immersive AI technology products for businesses</li>
+                            <li>Establish Outstandr as a thought leader in business transformation</li>
+                            <li>Launch immersive AI technology products for businesses</li>
                         </ul>
                     </div>
                 </div>
@@ -149,19 +140,18 @@ const Outstandr: React.FC = () => {
                     <div className="timeline-content">
                         <h3>Global Transformation</h3>
                         <ul className="timeline-list">
-                            <li>• Establish multiple initiatives through AI solutions</li>
-                            <li>• Establish new paradigms for humanity business transformation</li>
+                            <li>Launch multiple transformation initiatives powered by AI</li>
+                            <li>Create new paradigms for human-centered business transformation</li>
                         </ul>
                     </div>
                 </div>
             </div>
 
-            {/* CTA Section */}
             <div className="cta-section">
                 <h2 className="cta-title">Join My Vision</h2>
                 <p className="cta-text">
-                    Be part of my mission to transform businesses through AI. Let's make extraordinary
-                    transformation for growth. Let's build the future together.
+                    Be part of my mission to transform businesses through AI. Let us build extraordinary outcomes
+                    for growth, resilience, and long-term impact.
                 </p>
                 <div className="cta-buttons">
                     <a href="https://www.outstandr.com" target="_blank" rel="noopener noreferrer" className="btn-join">

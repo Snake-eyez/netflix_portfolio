@@ -1,19 +1,16 @@
 import React from 'react';
-import { FaArrowLeft, FaBolt, FaHeart, FaUsers, FaSync, FaEye, FaGlobe, FaShieldAlt } from 'react-icons/fa';
-import { useNavigate } from 'react-router-dom';
+import { FaBolt, FaHeart, FaUsers, FaSync, FaEye, FaGlobe, FaShieldAlt } from 'react-icons/fa';
 import './VisionMission.css';
 
 import BackButton from '../components/BackButton';
 
 const VisionMission: React.FC = () => {
-    const navigate = useNavigate();
-
     return (
-        <div className="vision-mission-container">
+        <div className="vision-mission-container nf-page nf-theme-vision">
             <BackButton />
 
             {/* Header Section */}
-            <div className="vision-header">
+            <div className="vision-header nf-hero">
                 <h1 className="vision-page-title">Vision & Mission</h1>
                 <p className="vision-page-subtitle">
                     Shaping the future through conscious innovation and human-centered technology

@@ -1,18 +1,15 @@
 import React from 'react';
-import { FaArrowLeft, FaRocket, FaBell, FaDatabase, FaFolderOpen, FaLock } from 'react-icons/fa';
-import { useNavigate } from 'react-router-dom';
+import { FaBell, FaDatabase, FaFolderOpen, FaLock } from 'react-icons/fa';
 import './ComingSoon.css'; // Reusing the same CSS
 
 import BackButton from '../components/BackButton';
 
 const ResourceVault: React.FC = () => {
-    const navigate = useNavigate();
-
     return (
-        <div className="coming-soon-container">
+        <div className="coming-soon-container nf-page nf-theme-explorer">
             <BackButton />
 
-            <div className="coming-soon-content">
+            <div className="coming-soon-content nf-hero">
                 <div className="rocket-icon">
                     <FaDatabase />
                 </div>

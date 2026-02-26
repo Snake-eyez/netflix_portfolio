@@ -32,9 +32,24 @@ const NewsletterModal: React.FC<NewsletterModalProps> = ({ isOpen, onClose }) =>
         setStatus('submitting');
         setErrorMessage('');
 
+        const sanitizedFormData = {
+            name: formData.name.trim().slice(0, 100),
+            email: formData.email.trim().toLowerCase().slice(0, 254),
+            phone: formData.phone.trim().slice(0, 30),
+        };
+
+        const isEmailValid = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(sanitizedFormData.email);
+        const isPhoneValid = sanitizedFormData.phone.length === 0 || /^[+0-9()\-\s]{6,30}$/.test(sanitizedFormData.phone);
+
+        if (!sanitizedFormData.name || !isEmailValid || !isPhoneValid) {
+            setStatus('error');
+            setErrorMessage('Please provide valid contact details.');
+            return;
+        }
+
         try {
             await addDoc(collection(db, 'newsletter_subscribers'), {
-                ...formData,
+                ...sanitizedFormData,
                 createdAt: serverTimestamp()
             });
             setStatus('success');
@@ -43,11 +58,12 @@ const NewsletterModal: React.FC<NewsletterModalProps> = ({ isOpen, onClose }) =>
                 setStatus('idle');
                 setFormData({ name: '', email: '', phone: '' });
             }, 3000);
-        } catch (error: any) {
+        } catch (error: unknown) {
+            const firebaseError = error as { code?: string };
             console.error("Error adding document: ", error);
             setStatus('error');
             // Check if it's a permission error (likely due to missing config)
-            if (error.code === 'permission-denied' || error.code === 'unavailable') {
+            if (firebaseError.code === 'permission-denied' || firebaseError.code === 'unavailable') {
                 setErrorMessage('Connection failed. Please check Firebase configuration.');
             } else {
                 setErrorMessage('Something went wrong. Please try again.');

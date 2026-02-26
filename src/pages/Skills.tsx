@@ -1,11 +1,21 @@
 import React from 'react';
-import { FaArrowLeft, FaPython, FaJs, FaAws, FaDocker, FaDatabase, FaServer, FaCode, FaBrain, FaNetworkWired, FaUsers, FaLightbulb, FaChalkboardTeacher, FaComments, FaSitemap } from 'react-icons/fa';
-import { SiTypescript, SiTerraform, SiKubernetes, SiPostgresql, SiMongodb, SiVmware, SiOpenai, SiPytorch, SiTensorflow, SiLangchain } from 'react-icons/si';
-import { useNavigate } from 'react-router-dom';
+import { FaPython, FaAws, FaDocker, FaDatabase, FaServer, FaCode, FaBrain, FaNetworkWired, FaUsers, FaLightbulb, FaChalkboardTeacher, FaComments, FaSitemap } from 'react-icons/fa';
+import { SiTypescript, SiVmware, SiOpenai, SiLangchain } from 'react-icons/si';
 import BackButton from '../components/BackButton';
 import './Skills.css';
 
-const skillsData = {
+interface SkillItem {
+  name: string;
+  level: 'Expert' | 'Advanced';
+  years: string;
+  icon: React.ReactNode;
+}
+
+const skillsData: {
+  aiSkills: SkillItem[];
+  itSkills: SkillItem[];
+  personalSkills: SkillItem[];
+} = {
   aiSkills: [
     { name: "Prompt Engineering", level: "Expert", years: "3+", icon: <FaBrain /> },
     { name: "RAG Architecture", level: "Advanced", years: "2+", icon: <SiLangchain /> },
@@ -37,9 +47,7 @@ const skillsData = {
 
 
 const Skills: React.FC = () => {
-  const navigate = useNavigate();
-
-  const renderSkillSection = (title: string, skills: any[]) => (
+  const renderSkillSection = (title: string, skills: SkillItem[]) => (
     <div className="skill-section">
       <h3 className="section-title">{title}</h3>
       <div className="skills-grid">

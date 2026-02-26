@@ -1,13 +1,10 @@
 import React from 'react';
-import { FaArrowLeft, FaVideo, FaRobot, FaHeadset, FaClock } from 'react-icons/fa';
-import { useNavigate } from 'react-router-dom';
+import { FaVideo, FaRobot, FaHeadset, FaClock } from 'react-icons/fa';
 import './CaseStudy.css';
 
 import BackButton from '../components/BackButton';
 
 const AIAvatarCaseStudy: React.FC = () => {
-    const navigate = useNavigate();
-
     const problemSolutions = [
         {
             problem: "IT support requires constant human availability 24/7",

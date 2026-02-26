@@ -1,13 +1,11 @@
 import React, { useState } from 'react';
-import { FaArrowLeft, FaTimes } from 'react-icons/fa';
-import { useNavigate } from 'react-router-dom';
+import { FaTimes } from 'react-icons/fa';
 import { portfolioItems } from '../data/portfolioData';
 import './Portfolio.css';
 
 import BackButton from '../components/BackButton';
 
 export default function Portfolio(): React.JSX.Element {
-    const navigate = useNavigate();
     const [selectedImage, setSelectedImage] = useState<number | null>(null);
 
     const openLightbox = (index: number) => {
@@ -31,10 +29,10 @@ export default function Portfolio(): React.JSX.Element {
     };
 
     return (
-        <div className="portfolio-container">
+        <div className="portfolio-container nf-page nf-theme-creative">
             <BackButton />
 
-            <div className="portfolio-hero">
+            <div className="portfolio-hero nf-hero">
                 <h1 className="portfolio-title">Creative Portfolio</h1>
                 <p className="portfolio-subtitle">
                     Visual storytelling through photography and conceptual art
@@ -50,7 +48,7 @@ export default function Portfolio(): React.JSX.Element {
                         onClick={() => openLightbox(index)}
                     >
                         <div className="portfolio-image-wrapper">
-                            <img src={item.image} alt={item.title} className="portfolio-image" />
+                            <img src={item.image} alt={item.title} className="portfolio-image" loading="lazy" decoding="async" />
                             <div className="portfolio-overlay">
                                 <span className="portfolio-category">{item.category}</span>
                                 <h3 className="portfolio-item-title">{item.title}</h3>

@@ -1,6 +1,5 @@
-import React, { useState } from 'react';
-import { FaArrowLeft, FaSearch, FaBook } from 'react-icons/fa';
-import { useNavigate } from 'react-router-dom';
+import React, { useMemo, useState } from 'react';
+import { FaSearch, FaBook } from 'react-icons/fa';
 import BackButton from '../components/BackButton';
 import './Reading.css';
 
@@ -119,32 +118,39 @@ const books: Book[] = [
 const genres = ['All', 'Self-Improvement', 'Business', 'Spirituality', 'Psychology', 'History', 'Biography', 'Finance', 'Technology', 'Philosophy', 'Programming', 'Leadership', 'Strategy', 'Productivity', 'Science', 'Literature', 'Mythology'];
 
 const Reading: React.FC = () => {
-  const navigate = useNavigate();
   const [selectedGenre, setSelectedGenre] = useState('All');
   const [sortBy, setSortBy] = useState<'year' | 'rating' | 'title'>('year');
   const [searchQuery, setSearchQuery] = useState('');
 
-  const filteredBooks = books
-    .filter(book => selectedGenre === 'All' || book.genre === selectedGenre)
-    .filter(book =>
-      book.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
-      book.author.toLowerCase().includes(searchQuery.toLowerCase())
-    )
-    .sort((a, b) => {
-      if (sortBy === 'year') return (b.yearRead || 2020) - (a.yearRead || 2020);
-      if (sortBy === 'rating') return b.rating - a.rating;
-      return a.title.localeCompare(b.title);
-    });
+  const filteredBooks = useMemo(() => {
+    const normalizedQuery = searchQuery.trim().toLowerCase();
 
-  const totalPages = books.reduce((sum, book) => sum + (book.pages || 0), 0);
-  const avgRating = (books.reduce((sum, book) => sum + book.rating, 0) / books.length).toFixed(1);
-  const fiveStarCount = books.filter(b => b.rating === 5).length;
+    return books
+      .filter(book => selectedGenre === 'All' || book.genre === selectedGenre)
+      .filter(book =>
+        book.title.toLowerCase().includes(normalizedQuery) ||
+        book.author.toLowerCase().includes(normalizedQuery)
+      )
+      .sort((a, b) => {
+        if (sortBy === 'year') return (b.yearRead || 2020) - (a.yearRead || 2020);
+        if (sortBy === 'rating') return b.rating - a.rating;
+        return a.title.localeCompare(b.title);
+      });
+  }, [searchQuery, selectedGenre, sortBy]);
+
+  const readingStats = useMemo(() => {
+    const totalPages = books.reduce((sum, book) => sum + (book.pages || 0), 0);
+    const avgRating = (books.reduce((sum, book) => sum + book.rating, 0) / books.length).toFixed(1);
+    const fiveStarCount = books.filter(book => book.rating === 5).length;
+
+    return { totalPages, avgRating, fiveStarCount };
+  }, []);
 
   return (
-    <div className="reading-page-container">
+    <div className="reading-page-container nf-page nf-theme-explorer">
       <BackButton />
 
-      <div className="reading-header">
+      <div className="reading-header nf-hero">
         <div className="reading-header-top">
           <div className="reading-icon">
             <FaBook />
@@ -154,7 +160,7 @@ const Reading: React.FC = () => {
             <div className="reading-stats-inline">
               <span>{books.length} books</span>
               <span className="stat-separator">•</span>
-              <span className="highlight">{totalPages.toLocaleString()} pages read</span>
+              <span className="highlight">{readingStats.totalPages.toLocaleString()} pages read</span>
             </div>
           </div>
         </div>
@@ -246,22 +252,22 @@ const Reading: React.FC = () => {
       </div>
 
       <div className="reading-stats-section">
-        <h2>📊 Reading Statistics</h2>
+        <h2>Reading Statistics</h2>
         <div className="stats-grid">
           <div className="stat-card">
             <div className="stat-value">{books.length}</div>
             <div className="stat-label">Total Books</div>
           </div>
           <div className="stat-card">
-            <div className="stat-value">{avgRating}/5</div>
+            <div className="stat-value">{readingStats.avgRating}/5</div>
             <div className="stat-label">Average Rating</div>
           </div>
           <div className="stat-card">
-            <div className="stat-value">{fiveStarCount}</div>
+            <div className="stat-value">{readingStats.fiveStarCount}</div>
             <div className="stat-label">5-Star Ratings</div>
           </div>
           <div className="stat-card">
-            <div className="stat-value">{(totalPages / 1000).toFixed(1)}k</div>
+            <div className="stat-value">{(readingStats.totalPages / 1000).toFixed(1)}k</div>
             <div className="stat-label">Pages Read</div>
           </div>
         </div>

@@ -1,43 +1,51 @@
-import React, { useState } from 'react';
-import { FaArrowLeft, FaSearch, FaFilm } from 'react-icons/fa';
-import { useNavigate } from 'react-router-dom';
+import React, { useMemo, useState } from 'react';
+import { FaFilm, FaSearch } from 'react-icons/fa';
+import BackButton from '../components/BackButton';
 import { movies } from '../data/moviesData';
 import './Movies.css';
 
-import BackButton from '../components/BackButton';
-
 const genres = ['All', 'Drama', 'Crime', 'Action', 'Sci-Fi', 'Thriller', 'Animation', 'Adventure', 'Comedy', 'Romance', 'Biography', 'Horror'];
+const bulletSeparator = String.fromCharCode(8226);
+const starGlyph = String.fromCharCode(9733);
+const timerGlyph = String.fromCharCode(9201);
 
 export default function Movies(): React.JSX.Element {
-    const navigate = useNavigate();
     const [selectedGenre, setSelectedGenre] = useState<string>('All');
     const [sortBy, setSortBy] = useState<'year' | 'rating' | 'title'>('year');
     const [searchQuery, setSearchQuery] = useState<string>('');
 
-    const filteredMovies = movies
-        .filter(movie => selectedGenre === 'All' || movie.genre === selectedGenre)
-        .filter(movie =>
-            movie.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
-            movie.director.toLowerCase().includes(searchQuery.toLowerCase())
-        )
-        .sort((a, b) => {
-            switch (sortBy) {
-                case 'year': return b.year - a.year;
-                case 'rating': return b.personalRating - a.personalRating;
-                case 'title': return a.title.localeCompare(b.title);
-                default: return 0;
-            }
-        });
+    const filteredMovies = useMemo(() => {
+        const normalizedQuery = searchQuery.trim().toLowerCase();
 
-    const totalRuntime = movies.reduce((sum, movie) => sum + (movie.runtime || 0), 0);
-    const avgRating = (movies.reduce((sum, movie) => sum + movie.personalRating, 0) / movies.length).toFixed(1);
-    const highRatedCount = movies.filter(m => m.personalRating >= 9).length;
+        return movies
+            .filter(movie => selectedGenre === 'All' || movie.genre === selectedGenre)
+            .filter(movie =>
+                movie.title.toLowerCase().includes(normalizedQuery) ||
+                movie.director.toLowerCase().includes(normalizedQuery)
+            )
+            .sort((a, b) => {
+                switch (sortBy) {
+                    case 'year': return b.year - a.year;
+                    case 'rating': return b.personalRating - a.personalRating;
+                    case 'title': return a.title.localeCompare(b.title);
+                    default: return 0;
+                }
+            });
+    }, [searchQuery, selectedGenre, sortBy]);
+
+    const movieStats = useMemo(() => {
+        const totalRuntime = movies.reduce((sum, movie) => sum + (movie.runtime || 0), 0);
+        const avgRating = (movies.reduce((sum, movie) => sum + movie.personalRating, 0) / movies.length).toFixed(1);
+        const highRatedCount = movies.filter(movie => movie.personalRating >= 9).length;
+
+        return { totalRuntime, avgRating, highRatedCount };
+    }, []);
 
     return (
-        <div className="movies-page-container">
+        <div className="movies-page-container nf-page nf-theme-explorer">
             <BackButton />
 
-            <div className="movies-header">
+            <div className="movies-header nf-hero">
                 <div className="movies-header-top">
                     <div className="movies-icon">
                         <FaFilm />
@@ -46,8 +54,8 @@ export default function Movies(): React.JSX.Element {
                         <h1 className="movies-page-title">My Movie Collection</h1>
                         <div className="movies-stats-inline">
                             <span>{movies.length} films</span>
-                            <span className="stat-separator">•</span>
-                            <span className="highlight">{totalRuntime} min total</span>
+                            <span className="stat-separator">{bulletSeparator}</span>
+                            <span className="highlight">{movieStats.totalRuntime} min total</span>
                         </div>
                     </div>
                 </div>
@@ -120,18 +128,18 @@ export default function Movies(): React.JSX.Element {
                             <p className="movie-director">by {movie.director}</p>
                             <div className="movie-meta">
                                 <span>{movie.year}</span>
-                                <span>•</span>
+                                <span>{bulletSeparator}</span>
                                 <span>{movie.country}</span>
                             </div>
                             {movie.runtime && (
                                 <div className="movie-runtime">
-                                    <span>⏱ {movie.runtime} min</span>
+                                    <span>{timerGlyph} {movie.runtime} min</span>
                                 </div>
                             )}
                             <div className="movie-ratings">
                                 <div className="movie-rating">
                                     {[...Array(5)].map((_, i) => (
-                                        <span key={i} className={i < Math.floor(movie.personalRating / 2) ? 'star filled' : 'star'}>★</span>
+                                        <span key={i} className={i < Math.floor(movie.personalRating / 2) ? 'star filled' : 'star'}>{starGlyph}</span>
                                     ))}
                                 </div>
                                 <span className="rating-score">{movie.personalRating}/10</span>
@@ -142,22 +150,22 @@ export default function Movies(): React.JSX.Element {
             </div>
 
             <div className="movies-stats-section">
-                <h2>🎯 Movie Statistics</h2>
+                <h2>Movie Statistics</h2>
                 <div className="stats-grid">
                     <div className="stat-card">
                         <div className="stat-value">{movies.length}</div>
                         <div className="stat-label">Total Movies</div>
                     </div>
                     <div className="stat-card">
-                        <div className="stat-value">{avgRating}/10</div>
+                        <div className="stat-value">{movieStats.avgRating}/10</div>
                         <div className="stat-label">Average Rating</div>
                     </div>
                     <div className="stat-card">
-                        <div className="stat-value">{highRatedCount}</div>
+                        <div className="stat-value">{movieStats.highRatedCount}</div>
                         <div className="stat-label">9-10 Star Ratings</div>
                     </div>
                     <div className="stat-card">
-                        <div className="stat-value">{Math.round(totalRuntime / 60)}h</div>
+                        <div className="stat-value">{Math.round(movieStats.totalRuntime / 60)}h</div>
                         <div className="stat-label">Total Watch Time</div>
                     </div>
                 </div>

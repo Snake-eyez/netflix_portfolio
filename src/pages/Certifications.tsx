@@ -1,8 +1,7 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import './Certifications.css';
 import { FaExternalLinkAlt, FaUniversity } from 'react-icons/fa';
 import { SiUdemy, SiCoursera, SiIeee } from 'react-icons/si';
-import { Certification } from '../types';
 import { mockCertifications } from '../data/mockData';
 const iconData: { [key: string]: React.ReactNode } = {
   'udemy': <SiUdemy />,

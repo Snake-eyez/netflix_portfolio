@@ -1,13 +1,10 @@
 import React from 'react';
-import { FaArrowLeft, FaChartLine, FaRobot, FaUsers, FaClock } from 'react-icons/fa';
-import { useNavigate } from 'react-router-dom';
+import { FaChartLine, FaRobot, FaUsers, FaClock } from 'react-icons/fa';
 import './CaseStudy.css';
 
 import BackButton from '../components/BackButton';
 
 const ConstructAICaseStudy: React.FC = () => {
-    const navigate = useNavigate();
-
     const problemSolutions = [
         {
             problem: "77% of construction projects finish late",

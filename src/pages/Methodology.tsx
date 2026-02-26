@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
-import { FaArrowLeft, FaLightbulb, FaCogs, FaChalkboardTeacher, FaChevronDown, FaChevronUp, FaRocket, FaNetworkWired, FaBrain, FaChartLine } from 'react-icons/fa';
+import { FaLightbulb, FaCogs, FaChalkboardTeacher, FaChevronDown, FaChevronUp, FaNetworkWired, FaChartLine } from 'react-icons/fa';
 import './Methodology.css';
 import BackButton from '../components/BackButton';
 
@@ -76,7 +75,6 @@ const methodologySteps: MethodologyStep[] = [
 ];
 
 const Methodology: React.FC = () => {
-    const navigate = useNavigate();
     const [expandedId, setExpandedId] = useState<string | null>(null);
 
     const toggleExpand = (id: string) => {
@@ -84,10 +82,10 @@ const Methodology: React.FC = () => {
     };
 
     return (
-        <div className="methodology-container">
+        <div className="methodology-container nf-page nf-theme-vision">
             <BackButton />
 
-            <div className="methodology-header">
+            <div className="methodology-header nf-hero">
                 <h1 className="methodology-title">My Methodology</h1>
                 <p className="methodology-description">
                     A proven 5-step framework for implementing impactful and scalable AI solutions.

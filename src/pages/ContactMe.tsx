@@ -1,12 +1,10 @@
 import React, { useState } from 'react';
-import { FaArrowLeft, FaEnvelope, FaPaperPlane } from 'react-icons/fa';
-import { useNavigate } from 'react-router-dom';
+import { FaEnvelope, FaPaperPlane } from 'react-icons/fa';
 import './ContactMe.css';
 
 import BackButton from '../components/BackButton';
 
 const ContactMe: React.FC = () => {
-  const navigate = useNavigate();
   const [formData, setFormData] = useState({
     name: '',
     email: '',

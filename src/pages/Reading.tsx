@@ -1,6 +1,10 @@
 import React, { useMemo, useState } from 'react';
 import { FaSearch, FaBook } from 'react-icons/fa';
 import BackButton from '../components/BackButton';
+import atomicHabitsCover from '../images/atomic_habits.jpg';
+import alchemistCover from '../images/alchemist.jpg';
+import eatThatFrogCover from '../images/eat_that_frog.jpg';
+import richDadPoorDadCover from '../images/rich_dad_poor_dad.jpg';
 import './Reading.css';
 
 interface Book {
@@ -114,6 +118,12 @@ const books: Book[] = [
   { title: 'Monas Hieroglyphica', author: 'John Dee', genre: 'Spirituality', rating: 5, yearRead: 2025, pages: 112 },
 ];
 
+const localBookCovers: Record<string, string> = {
+  'Atomic Habits': atomicHabitsCover,
+  'The Alchemist': alchemistCover,
+  'Eat That Frog': eatThatFrogCover,
+  'Rich Dad Poor Dad': richDadPoorDadCover,
+};
 
 const genres = ['All', 'Self-Improvement', 'Business', 'Spirituality', 'Psychology', 'History', 'Biography', 'Finance', 'Technology', 'Philosophy', 'Programming', 'Leadership', 'Strategy', 'Productivity', 'Science', 'Literature', 'Mythology'];
 
@@ -159,7 +169,7 @@ const Reading: React.FC = () => {
             <h1 className="reading-page-title">My Book Library</h1>
             <div className="reading-stats-inline">
               <span>{books.length} books</span>
-              <span className="stat-separator">•</span>
+              <span className="stat-separator">{'\\u2022'}</span>
               <span className="highlight">{readingStats.totalPages.toLocaleString()} pages read</span>
             </div>
           </div>
@@ -223,25 +233,38 @@ const Reading: React.FC = () => {
             style={{ '--delay': `${index * 0.05}s` } as React.CSSProperties}
           >
             <div className="book-cover-wrapper">
-              <div className="book-cover-placeholder">
-                <div className="book-spine"></div>
-                <div className="book-cover-content">
-                  <div className="book-cover-title">{book.title}</div>
-                  <div className="book-cover-author">{book.author}</div>
+              {localBookCovers[book.title] ? (
+                <img
+                  src={localBookCovers[book.title]}
+                  alt={`${book.title} cover`}
+                  className="book-cover-image"
+                  loading="lazy"
+                />
+              ) : (
+                <div className="book-cover-placeholder">
+                  <div className="book-spine"></div>
+                  <div className="book-cover-content">
+                    <div className="book-cover-title">{book.title}</div>
+                    <div className="book-cover-author">{book.author}</div>
+                  </div>
                 </div>
-              </div>
+              )}
               <div className="book-genre-badge">{book.genre}</div>
             </div>
             <div className="book-info">
+              <h3 className="book-title-text">{book.title}</h3>
+              <p className="book-author-text">{book.author}</p>
               <div className="book-meta">
                 <span>{book.yearRead || '2022'}</span>
-                <span>•</span>
+                <span>{'\u2022'}</span>
                 <span>{book.pages || 200} pages</span>
               </div>
               <div className="book-ratings">
                 <div className="book-rating">
                   {[...Array(5)].map((_, i) => (
-                    <span key={i} className={i < book.rating ? 'star filled' : 'star'}>★</span>
+                    <span key={i} className={i < book.rating ? 'star filled' : 'star'}>
+                      {i < book.rating ? '\u2605' : '\u2606'}
+                    </span>
                   ))}
                 </div>
                 <span className="rating-score">{book.rating}/5</span>
@@ -277,3 +300,4 @@ const Reading: React.FC = () => {
 };
 
 export default Reading;
+
